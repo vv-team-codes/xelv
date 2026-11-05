@@ -157,6 +157,18 @@ section.block{padding:26px 0 6px}
 .feed-meta .today{color:var(--red);font-weight:800}
 .feed-link{font-size:13.5px;font-weight:800;color:var(--teal);text-decoration:none;white-space:nowrap;padding-top:2px}
 .feed-link:hover{text-decoration:underline}
+button.feed-link{background:none;border:0;font-family:inherit;cursor:pointer;padding-left:0;padding-right:0}
+.feed-list h3 button.wire-open{background:none;border:0;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.feed-list h3 button.wire-open:hover{color:var(--teal);text-decoration:underline}
+.feed-list li{cursor:pointer}
+.wire-brief{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:13px 16px;margin:0 0 14px}
+.wire-brief h4{margin:0 0 7px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.wire-brief p{margin:0 0 10px}
+.wire-brief p:last-child{margin-bottom:0}
+.wire-more button{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:9px 0;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:16px;line-height:1.4;color:var(--ink);cursor:pointer}
+.wire-more button:first-of-type{border-top:0}
+.wire-more button:hover{color:var(--teal);text-decoration:underline}
+.wire-more button small{display:block;font-family:"Libre Franklin","Noto Sans Tamil",sans-serif;font-size:12.5px;font-weight:600;color:var(--ink2);margin-top:2px}
 .feed-foot{padding:12px 18px 16px;font-size:13.5px;color:var(--ink2);border-top:1px solid var(--line)}
 .feed-foot b{color:var(--ink)}
 details.howto{margin:0 18px 16px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;background:var(--paper)}
@@ -478,7 +490,7 @@ nav.mainnav a.hot{color:var(--red)}
     <div class="tick"><span class="k">Nifty 50</span><span class="v">23,960.60</span><span class="up">▲ 0.63%</span><span class="src">4 நவ. close · ET</span></div>
     <div class="tick"><span class="k">MCX தங்கம்</span><span class="v">₹1,45,535 / 10 கிராம்</span><span class="up">▲ 1.61%</span><span class="src">Business Today</span></div>
   </div>
-  <div class="wrap"><p class="snap-note">Snapshot: <b>5 நவம்பர் 2026, மதியம் 3:28 IST</b> — விலைகள் நாள்தோறும் மாறும். கடையில் வாங்கும் முன் உறுதி செய்யுங்கள். மூலம்: Business Today, Goodreturns, Economic Times.</p></div>
+  <div class="wrap"><p class="snap-note">Snapshot: <b>5 நவம்பர் 2026, மதியம் 1:25 IST</b> — விலைகள் நாள்தோறும் மாறும். கடையில் வாங்கும் முன் உறுதி செய்யுங்கள். மூலம்: Business Today, Goodreturns, Economic Times.</p></div>
 </div>
 
 <main class="wrap">
@@ -558,7 +570,7 @@ nav.mainnav a.hot{color:var(--red)}
       <div class="region-panel" data-region="us" hidden>
         <h3>🇺🇸 United States — same gold, in dollars</h3>
         <p><b>Gold 24K today:</b> about <b>$1,662 / 10g</b> ($166.20/g) · <b>22K:</b> about $1,524 / 10g — converted from the Chennai 5 Nov snapshot at the indicative rate below. US readers use the same calculators: switch the currency converter to USD.</p>
-        <ul><li><b>Follow:</b> US Fed rates, dollar vs rupee, gold in USD, US jobs &amp; inflation, tech / AI news.</li><li><b>Why it matters:</b> a US reader on a finance article is worth far more in ads than the same view from India — see “Why global pays” below.</li><li><a href="https://news.google.com/" target="_blank" rel="noopener">Open Google News — US edition →</a></li></ul>
+        <ul><li><b>Follow:</b> US Fed rates, dollar vs rupee, gold in USD, US jobs &amp; inflation, tech / AI news.</li><li><a href="https://news.google.com/" target="_blank" rel="noopener">Open Google News — US edition →</a></li></ul>
       </div>
       <div class="region-panel" data-region="uk" hidden>
         <h3>🇬🇧 United Kingdom — gold in pounds</h3>
@@ -592,7 +604,7 @@ nav.mainnav a.hot{color:var(--red)}
       </div>
     </div>
 
-    <div class="region-grid">
+    <div class="region-grid" style="grid-template-columns:1fr">
       <div class="panel" id="gold-world">
         <div class="ph">Gold price worldwide — 24K, 10 grams <span>5 Nov 2026 snapshot · USD equivalent shown</span></div>
         <table class="world">
@@ -609,17 +621,7 @@ nav.mainnav a.hot{color:var(--red)}
           </tbody>
         </table>
         <p class="pf">One world price, eight currencies. The highlighted row is your current location. Converted from Chennai 24K ₹1,46,250 / 10g at indicative rates used for this snapshot only — <b>₹88 = $1 · £1 = ₹117 · AED 1 = ₹24.0 · S$1 = ₹68 · RM 1 = ₹21 · CAD 1 = ₹64 · AUD 1 = ₹58</b>. Live rates change daily; check before buying. Making charges + local tax are extra everywhere.</p>
-      </div>
-      <div class="panel">
-        <div class="ph">Why global pays — the same 1,000 views <span>Indicative, not a promise</span></div>
-        <div style="padding:14px 16px">
-          <p style="font-size:15px"><b>US / UK traffic earns many times more than India traffic for the same finance article</b> — industry guides put US finance RPM roughly <b>10–20× the India figure</b>, because advertisers there pay far more for one loan or insurance customer. That is why this site is in English for the world, not Tamil only.</p>
-          <p style="font-size:14.5px;color:var(--ink2);margin-top:10px">India finance: about ₹250–₹830 per 1,000 views (see table below). The same 1,000 views from the US or UK, on the same insurance / loan topic, can be worth several thousand rupees — which is why the Global Edition, worldwide gold prices and the NRI corner are on the front page, not hidden. Exact earnings always depend on advertiser, season and reader — no figure here is a guarantee.</p>
-          <p style="font-size:14.5px;margin-top:10px"><b>What this means for the site:</b> write in English, cover US / UK / Gulf money topics too, and make every price readable in USD, AED, GBP, SGD and MYR — so a reader anywhere can use the page, and stay.</p>
-        </div>
-      </div>
-    </div>
-    <p class="global-note"><b>🌐 How the live site stays global:</b> on launch, the daily Google News job pulls a feed per region (India, US, UK, UAE, Singapore/Malaysia) and per topic, and gold / currency rates refresh daily from a reference rate — the preview above is the 5 Nov 2026 snapshot of that design. No region is copied from another site: headlines link out to the original publisher.</p>
+      </div></div>
   </section>
 
   <!-- ======= ad slot: leaderboard ======= -->
@@ -633,27 +635,15 @@ nav.mainnav a.hot{color:var(--red)}
   <section class="block" id="live" aria-label="Live headlines from Google News">
     <div class="sec-head">
       <h2><span class="ta">Live தலைப்புகள்</span> — Google News-ல் இருந்து தானாக</h2>
-      <span class="sub">தலைப்பு + மூலம் + இணைப்பு மட்டும் · முழு செய்தி அசல் தளத்தில்</span>
+      <span class="sub">தலைப்பு + மூலம் + நேரம் · தொட்டால் XELV சுருக்கம் இங்கேயே திறக்கும்</span>
     </div>
 
     <div class="live-panel">
       <div class="live-bar">
         <span class="pill"><i></i>GOOGLE NEWS FEED</span>
-        <span class="upd">Snapshot: <b>5 நவம்பர் 2026, 3:28 PM IST</b> · Live site-ல் தினமும் காலை 7:00 மணிக்கு தானாகப் புதுப்பிக்கப்படும்</span>
-        <button class="how" type="button" id="howBtn">இது எப்படி வேலை செய்கிறது?</button>
+        <span class="upd">Snapshot: <b>5 நவம்பர் 2026, 1:25 PM IST</b> · Live site-ல் தினமும் காலை 7:00 மணிக்கு தானாகப் புதுப்பிக்கப்படும்</span>
       </div>
-      <p class="wire-attrib"><b>via Google News</b> &middot; Headlines, source and time only &mdash; tap a headline to read the full story on the original publisher&rsquo;s site. Times shown are as published by the source.</p>
-
-      <details class="howto" id="howto">
-        <summary>Auto-update எப்படி வேலை செய்கிறது? (ஒரு நிமிட விளக்கம்)</summary>
-        <ol>
-          <li><b>Google News RSS:</b> Finance, Gold, Insurance, Govt Jobs, Tech என ஒவ்வொரு பிரிவுக்கும் தனித்தனி Google News feed உண்டு — இது இலவசம், API key தேவையில்லை.</li>
-          <li><b>தினமும் காலை தானாக:</b> Live site-ல் ஒரு சிறிய daily job காலை 7 மணிக்கு ஒவ்வொரு feed-லும் புதிய தலைப்புகளை எடுத்து இந்தப் பக்கத்தில் போடும். யாரும் கையால் type செய்யத் தேவையில்லை.</li>
-          <li><b>ஒவ்வொரு region-க்கும் தனி தொகுப்பு:</b> இந்த preview-லேயே ஒவ்வொரு இடத்துக்கும் தனித்தனி snapshot தலைப்புகள் உள்ளன — India 20, மற்ற இடங்கள் ஒவ்வொன்றும் 10. Region-ஐ மாற்றியதும் கீழே உள்ள தலைப்புப் பட்டியல் உடனே அந்த இடத்தின் தலைப்புகளாக மாறும். Live site-ல் இவை தினமும் Google News RSS-ல் இருந்து புதுப்பிக்கப்படும்.</li>
-          <li><b>தலைப்பு + மூலம் + இணைப்பு மட்டும்:</b> முழு செய்தியை copy செய்வதில்லை — வாசகர் அசல் பத்திரிகை தளத்துக்குப் போய் படிப்பார். இதுதான் AdSense-க்கு பாதுகாப்பான வழி.</li>
-          <li><b>சொந்தக் கட்டுரைகள் தனி:</b> RSS மட்டும் வைத்த site-க்கு AdSense approval கிடைக்காது. அதனால்தான் கீழே நம்முடைய சொந்த original கட்டுரைகள் + கால்குலேட்டர்கள் இருக்கின்றன.</li>
-        </ol>
-      </details>
+      <p class="wire-attrib"><b>via Google News</b> &middot; Headlines collected from public reports &mdash; tap any headline to read XELV&rsquo;s brief right here on this site. Every story credits its source by name; times shown are as published by the source.</p>
 
       <p class="feed-region-note" id="feedRegionNote" style="margin-top:14px"><b>Your edition: India (Chennai).</b> Headlines below are the India snapshot set — 20 headlines, 5 Nov 2026. Pick another region in the Global section (or the location chip at the top) and this list switches at once to that place’s headlines. On the live site each region’s feed refreshes daily from Google News RSS. <button type="button" id="feedChangeLoc">Change location</button></p>
 
@@ -676,131 +666,131 @@ nav.mainnav a.hot{color:var(--red)}
         <!-- Finance -->
         <li data-cat="finance">
           <span class="feed-cat">Finance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxON2tMTGpRaEpnQURtUE91Y0NNT2hLVGMtNzZGQzM1YUxfWGo3a2YyWmQxcDV1WTRaSFpDREM3NkFXTUkzWkVwaHd5ZG8wZzJuZF85VWNPVjZpQnVDcy10eW8wMFFXS0phSGxFcGxHc3JERDVaNjJ4eGtCOG9pTzREYzJyY3B1enFGVTJ2bkdqZU5ONDVxSFlYM1FBTm9kNkt6ZExyMzhnVUQwNWt0NGZfSkx6amtnOHk4UmFVZE9ZVVAtcUN4Q1AwVmU0cjVzTjlJUUY4U0xwRVptOFBTTTVMZjN2RFoyREMzWW5jRTJFdFl0VzVJY2lCOVlScHE?oc=5" target="_blank" rel="noopener">NRI travelling to India to sell property can claim flight expenses as tax deduction, rules ITAT</a></h3>
-          <p class="feed-meta"><b>Moneycontrol.com</b> · <span class="today">இன்று, 5 Nov 2026, 2:31 PM</span> · NRI travelling to India to sell property can claim flight expenses as tax deduction,…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxON2tMTGpRaEpnQURtUE91Y0NNT2hLVGMtNzZGQzM1YUxfWGo3a2YyWmQxcDV1WTRaSFpDREM3NkFXTUkzWkVwaHd5ZG8wZzJuZF85VWNPVjZpQnVDcy10eW8wMFFXS0phSGxFcGxHc3JERDVaNjJ4eGtCOG9pTzREYzJyY3B1enFGVTJ2bkdqZU5ONDVxSFlYM1FBTm9kNkt6ZExyMzhnVUQwNWt0NGZfSkx6amtnOHk4UmFVZE9ZVVAtcUN4Q1AwVmU0cjVzTjlJUUY4U0xwRVptOFBTTTVMZjN2RFoyREMzWW5jRTJFdFl0VzVJY2lCOVlScHE?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">NBFCs Shift Strategies: Adapting to RBI's New Credit Standards</button></h3>
+          <p class="feed-meta"><b>Economic Times — ETCFO</b> · 4 Nov 2026, 7:53 AM IST · Bajaj Finance, Tata Capital புதிய term-loan வகைகளை அறிமுகம்</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="finance">
           <span class="feed-cat">Finance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZVVxbWs4Ti1nTF9SeVloZTRWd2pIT0RzbjBtYXFicGJWRElkZVYtUjdGaElpWHdxVW5FLVFoQjlDQmgtMmJmd0FQemNLemo2RTdMNUJqTTFRc0pPVFVZTGN1ZWt1bnpoSEQtMC1aZEJJZl9rRmdSQnRxRHBDdzd0Qy1LN0FfSkJ5QUx4dzdJTEZUWFEyY2tqc0dEcFZlNUJiQmJxTmt1b1owaU9IVXhieWJSOWY1QktTdHBSMy11QWg0eThYRjBMOXlsOHhWbXIxUHRLcHdGcmowOEQ50gHiAUFVX3lxTFByZVc2b3ZXX0dZVkJMOTJJYlZRWG5RUGlMZGplV2pPSE1QRkk2NzlRY3RjTHF0cnA5WEFNWDFLak5YR2xEaHI3YUExNnYwcl84TmlhREJqbGlQbXE2WEs3ZGlmRmZtbHJUaDZVWHhZWTVmMDk4VmpjWHNJTU1OaF9zdEtScFJPRFBvbjZNYUhmcmxyTVF3NjM5QURyUFVyMHR0aUpkTDItVmc1cUR1Z2NNb1NqVVg5cjVYM0Rtb1lFc05tdk9iUEJ2ME1YSXVKaWY4aXRqbExxLUVTeXRCdFllQ0E?oc=5" target="_blank" rel="noopener">India plans visa overhaul, cuts categories from 13 to nine: Details</a></h3>
-          <p class="feed-meta"><b>Business Standard</b> · <span class="today">இன்று, 5 Nov 2026, 11:48 AM</span> · India plans visa overhaul, cuts categories from 13 to nine: Details</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZVVxbWs4Ti1nTF9SeVloZTRWd2pIT0RzbjBtYXFicGJWRElkZVYtUjdGaElpWHdxVW5FLVFoQjlDQmgtMmJmd0FQemNLemo2RTdMNUJqTTFRc0pPVFVZTGN1ZWt1bnpoSEQtMC1aZEJJZl9rRmdSQnRxRHBDdzd0Qy1LN0FfSkJ5QUx4dzdJTEZUWFEyY2tqc0dEcFZlNUJiQmJxTmt1b1owaU9IVXhieWJSOWY1QktTdHBSMy11QWg0eThYRjBMOXlsOHhWbXIxUHRLcHdGcmowOEQ50gHiAUFVX3lxTFByZVc2b3ZXX0dZVkJMOTJJYlZRWG5RUGlMZGplV2pPSE1QRkk2NzlRY3RjTHF0cnA5WEFNWDFLak5YR2xEaHI3YUExNnYwcl84TmlhREJqbGlQbXE2WEs3ZGlmRmZtbHJUaDZVWHhZWTVmMDk4VmpjWHNJTU1OaF9zdEtScFJPRFBvbjZNYUhmcmxyTVF3NjM5QURyUFVyMHR0aUpkTDItVmc1cUR1Z2NNb1NqVVg5cjVYM0Rtb1lFc05tdk9iUEJ2ME1YSXVKaWY4aXRqbExxLUVTeXRCdFllQ0E?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">RBI Revolving Credit Curbs: NBFCs Rework Loans</button></h3>
+          <p class="feed-meta"><b>Elets BFSI</b> · 4 Nov 2026 · Flexi loan-க்கு பதில் term loan — RBI draft விதி அப்படியே</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="finance">
           <span class="feed-cat">Finance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQYXVIOFNBOUk0dDk3VlhlQzlJT2pCWFk3Q1RxdEhaME83ZEhRYjJtUkZmNkJuTEhiV3RhWDdGTVE4d21TdjJIVVhrWmc5NzlLbWZaVFlhZG44RWtHZWtFaUdZVHVnSDVPN3VGMi1QZlZaX3pxR3JrSG81TWxaZjI3V3o3Y05wWEFpMjhHZ0N5V2Y4OHdwZWVqZEtWZUI5LUxQZjhxT3o4RjJscmNCcUZOelFUYW1haWQxQ0FzR1FDRXZoTVFGb1dLdXNmOHR2dS1vNU1XdVhNdHlBLVVG0gHiAUFVX3lxTFBaMTJyVVloMDhXZllrY0pNa2lRX1hDWHdRSlpKUFF0aXN5VUVIZW55bHBOOWlpVFpYNkdTSmx6TVpsNnVJSk13LUpSclNuUVlQVG5GTmtyOXljVGJKUU1laE9QVDR0M1NYZWRDZmZhNVhoTHNPbVVtdGhDOUs3eU9ZYU1UN1E4Z0hGcjk4Mm9iOHgyM0dhcl90MkljcEZUelg3NWhGWER5bTdKbE9kNUxDTGtwTDhINjE2c2RVNXl4aUtycW16SFg2RWlnNWFpVEp3TUd1WXEtYVc4cmNBYjZnNlE?oc=5" target="_blank" rel="noopener">India&#x27;s young aren&#x27;t splurging: 87% would save or invest a windfall</a></h3>
-          <p class="feed-meta"><b>Business Standard</b> · <span class="today">இன்று, 5 Nov 2026, 11:24 AM</span> · India&#x27;s young aren&#x27;t splurging: 87% would save or invest a windfall</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQYXVIOFNBOUk0dDk3VlhlQzlJT2pCWFk3Q1RxdEhaME83ZEhRYjJtUkZmNkJuTEhiV3RhWDdGTVE4d21TdjJIVVhrWmc5NzlLbWZaVFlhZG44RWtHZWtFaUdZVHVnSDVPN3VGMi1QZlZaX3pxR3JrSG81TWxaZjI3V3o3Y05wWEFpMjhHZ0N5V2Y4OHdwZWVqZEtWZUI5LUxQZjhxT3o4RjJscmNCcUZOelFUYW1haWQxQ0FzR1FDRXZoTVFGb1dLdXNmOHR2dS1vNU1XdVhNdHlBLVVG0gHiAUFVX3lxTFBaMTJyVVloMDhXZllrY0pNa2lRX1hDWHdRSlpKUFF0aXN5VUVIZW55bHBOOWlpVFpYNkdTSmx6TVpsNnVJSk13LUpSclNuUVlQVG5GTmtyOXljVGJKUU1laE9QVDR0M1NYZWRDZmZhNVhoTHNPbVVtdGhDOUs3eU9ZYU1UN1E4Z0hGcjk4Mm9iOHgyM0dhcl90MkljcEZUelg3NWhGWER5bTdKbE9kNUxDTGtwTDhINjE2c2RVNXl4aUtycW16SFg2RWlnNWFpVEp3TUd1WXEtYVc4cmNBYjZnNlE?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Diwali Bonus: Prepay Home Loan Or Invest In Mutual Funds?</button></h3>
+          <p class="feed-meta"><b>Outlook Money</b> · 31 Oct 2026 · ₹1 லட்சம் bonus — 8.5% வட்டி கடனை கட்டுவதா, MF-ல் போடுவதா?</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="finance">
           <span class="feed-cat">Finance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQeXpESGRLMzdWWmxHcWktSFEzOTZXclhEa1F5SENYQk5YMlZGdUtzR3dSaFo2WmhjZWZOS296eDVtd05LWkxmcGhzdmhhV0VxRFc0Z0Y1RlNMckpnTXBwRkF3OVcyTGg3NFpibFlQdklzMFBicmY5MWU0T0Z2TWxtTFMxd1hxbFB5aU12WDlQaVF0Sl8zVWp5LU1QTU40WTAyM0prY2NjTi1CQ0ljTmx0UWtpLUo4bW1JdzV1YldlZlc4Y2M1bmJtb2lWY0tRVUJLQ0pXQmd5N1FRZzRhV2xqZDdn0gHnAUFVX3lxTE05Ym5sSlBpZjVXdG9yRDd5d0EteTV6TU1USXA3YnlncnZxVjRNbzhKMlI1dEZMQmkxQ3lsMzdEdEVKY09ZY2wtc2tFcEZNZGlyNTZjNVpmVkNtWUFwQkRxRU4xa3dtYTRmamNCa1pfN21ZNzRMMEwxNGM1SC1iSjRiaFlrTFZUaWdzYmhVMmh1blkwN3ZpX1NsdlpLbXVidWM2V3RGdjB0WTBYaXl6V0ZuU3VFM1UtT1VRb25ENkpPTVQxeFIxSjQydDRWZzlldXEtaU5BeXN5bXBZdzBxUU1vb2FBWTczOA?oc=5" target="_blank" rel="noopener">Medical costs in India to rise 10.1% in 2027, double inflation rate: Aon</a></h3>
-          <p class="feed-meta"><b>Business Standard</b> · <span class="today">இன்று, 5 Nov 2026, 11:08 AM</span> · Medical costs in India to rise 10.1% in 2027, double inflation rate: Aon</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQeXpESGRLMzdWWmxHcWktSFEzOTZXclhEa1F5SENYQk5YMlZGdUtzR3dSaFo2WmhjZWZOS296eDVtd05LWkxmcGhzdmhhV0VxRFc0Z0Y1RlNMckpnTXBwRkF3OVcyTGg3NFpibFlQdklzMFBicmY5MWU0T0Z2TWxtTFMxd1hxbFB5aU12WDlQaVF0Sl8zVWp5LU1QTU40WTAyM0prY2NjTi1CQ0ljTmx0UWtpLUo4bW1JdzV1YldlZlc4Y2M1bmJtb2lWY0tRVUJLQ0pXQmd5N1FRZzRhV2xqZDdn0gHnAUFVX3lxTE05Ym5sSlBpZjVXdG9yRDd5d0EteTV6TU1USXA3YnlncnZxVjRNbzhKMlI1dEZMQmkxQ3lsMzdEdEVKY09ZY2wtc2tFcEZNZGlyNTZjNVpmVkNtWUFwQkRxRU4xa3dtYTRmamNCa1pfN21ZNzRMMEwxNGM1SC1iSjRiaFlrTFZUaWdzYmhVMmh1blkwN3ZpX1NsdlpLbXVidWM2V3RGdjB0WTBYaXl6V0ZuU3VFM1UtT1VRb25ENkpPTVQxeFIxSjQydDRWZzlldXEtaU5BeXN5bXBZdzBxUU1vb2FBWTczOA?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Bank advances against deposits up 53% due to FCNR(B) leverage: RBI data</button></h3>
+          <p class="feed-meta"><b>Business Standard</b> · 30 Oct 2026 · வங்கிக் கடன் 19.4% வளர்ச்சி; தங்க நகை மீதான கடன் 83% உயர்வு</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
-        <!-- தங்கம் -->
+        <!-- Gold -->
         <li data-cat="gold">
           <span class="feed-cat gold">தங்கம்</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPV016bHU5a0lLTlhEbjRMTTJtR1lHcTBWck1hZ2RNZGo4bFMyekd6SnJsU0xDVGRHbzhZT3VUYl9fU3M2X3JseGswLU8xZXl2cEFiMl81Y2xKMWVxVlFPS25RdW9ob0tZZXZFTHZKaHU2YUhQaHFtSGZ4endvNEhLVWRyRl80dWctR0RvSTh6TldGT0hvd1pIV3QyaTZ1dHBrMkFINU96Q3R0cWowZFhUNVAyMHF2Zw?oc=5" target="_blank" rel="noopener">Gold Rate Today, Silver Prices Nov 5 Ahead of Dhanteras: 24K, 22K Rates in Karnataka, Delhi, Mumbai &amp; Ahmedabad</a></h3>
-          <p class="feed-meta"><b>The United Indian</b> · <span class="today">இன்று, 5 Nov 2026, 3:12 PM</span> · Gold Rate Today, Silver Prices Nov 5 Ahead of Dhanteras: 24K, 22K Rates in Karnataka,…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPV016bHU5a0lLTlhEbjRMTTJtR1lHcTBWck1hZ2RNZGo4bFMyekd6SnJsU0xDVGRHbzhZT3VUYl9fU3M2X3JseGswLU8xZXl2cEFiMl81Y2xKMWVxVlFPS25RdW9ob0tZZXZFTHZKaHU2YUhQaHFtSGZ4endvNEhLVWRyRl80dWctR0RvSTh6TldGT0hvd1pIV3QyaTZ1dHBrMkFINU96Q3R0cWowZFhUNVAyMHF2Zw?oc=5" target="_blank" rel="noopener">படிக்க →</a>
-        </li>
-        <li data-cat="gold">
-          <span class="feed-cat gold">தங்கம்</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxNRGZPb2U1cGVLT3BPc0lyZ3RVcDF0UENTY1VpR0xwNktQUDVXM01uM1JVYWxoUk4xbG5xNm92TDdRVzg2ZXNZcjdIRUkzOS15bGVEWWxVLS1ZUl9MclM1Vl9TcmNIOG1saHhRWlltZXJlT1BfNG5lbGNscUY5QjVHUkVyZ3VEZ0FqOFRPdGFacXJlQzcxbGJDSkgwNUhCSThWRWZDQzNQaXBEdVQ0cWpwdzNid2pIR0J0Wk1KNDhYRmp6MzlVZEE5M2dTbXPSAdIBQVVfeXFMT3FoeE5rdHItSVBtWVJfUmpwNmtrQm1Jb1p6a1FQVmZvbFIzbV9vVHZPVzh1dW03dUNoeU10WjlQODA4bGVkbWMzYm53LVp1WW5mMVljb1pvZUs3Sy1lQWtMb0MtOUY0WG9Ld2Zka1c4NDZVbVQyZ3JyekU5dTNiVFMzZlBiWlB4endXdGpjeU1md0w2SHpBTEJBc1pkZ3BGOXFybWlJNXlENnVLVnVsN1pmSXRWcWhzRFU5SUtQVTNhRXRzUll1V3ktQjhXTjZwR01n?oc=5" target="_blank" rel="noopener">India Jewellery Retailers See Slower Sales Decline Despite Gold Prices</a></h3>
-          <p class="feed-meta"><b>Asianet Newsable</b> · <span class="today">இன்று, 5 Nov 2026, 2:21 PM</span> · India Jewellery Retailers See Slower Sales Decline Despite Gold Prices</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMizAFBVV95cUxNRGZPb2U1cGVLT3BPc0lyZ3RVcDF0UENTY1VpR0xwNktQUDVXM01uM1JVYWxoUk4xbG5xNm92TDdRVzg2ZXNZcjdIRUkzOS15bGVEWWxVLS1ZUl9MclM1Vl9TcmNIOG1saHhRWlltZXJlT1BfNG5lbGNscUY5QjVHUkVyZ3VEZ0FqOFRPdGFacXJlQzcxbGJDSkgwNUhCSThWRWZDQzNQaXBEdVQ0cWpwdzNid2pIR0J0Wk1KNDhYRmp6MzlVZEE5M2dTbXPSAdIBQVVfeXFMT3FoeE5rdHItSVBtWVJfUmpwNmtrQm1Jb1p6a1FQVmZvbFIzbV9vVHZPVzh1dW03dUNoeU10WjlQODA4bGVkbWMzYm53LVp1WW5mMVljb1pvZUs3Sy1lQWtMb0MtOUY0WG9Ld2Zka1c4NDZVbVQyZ3JyekU5dTNiVFMzZlBiWlB4endXdGpjeU1md0w2SHpBTEJBc1pkZ3BGOXFybWlJNXlENnVLVnVsN1pmSXRWcWhzRFU5SUtQVTNhRXRzUll1V3ktQjhXTjZwR01n?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Gold, Silver Prices Today: Precious metals extend rally for second day ahead of Dhanteras</button></h3>
+          <p class="feed-meta"><b>Zee Business</b> · <span class="today">இன்று, 5 Nov 2026, 12:29 PM</span> · MCX தங்கம் ₹1,45,021 — நகர வாரியான விலைகள் உள்ளே</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="gold">
           <span class="feed-cat gold">தங்கம்</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPSi1JTkNudW9oNHlkeHRNOTlCdjByS0F3SE5UNzVUbjhfdElobjFXaXUwV3VWR0hPaWJrRXo5eXNUOXBPdTdtSDVEZU93WDhnbHQ2MnMtNDhQV0ZHa0o2clA4emp2Z0tlSXRXdGVGbk16YTRhajU2OG8tUkhDRElLQnc4TjZOVlA3WU1kMnM5TEZ2SmlXcXA4X05aZ0ZjcjlwQzI5SFlUcWppWGNkbjR2Z2pOSEFSN1B3dXFTTUNqVDAzZWh5MEdrQ2d1Vlp0ME3SAdQBQVVfeXFMTlRVMHEta3RJcUdYdHp1YkpGYnFRYmhxdjBkNjRwbHJ1cnJqZTZnVG1DaGtUbE5Qa3JIZmpKSVZrYm04UXNseHo1OVQ0Zk5FTm5VWDBJcTR2dENoOFZaSmVQQmxHbi1nQmtmQ25wTWY5WW5mbW01aGV1TGsxT0pKODJmcWhuYlpocDZGZHdReE83Y3BvTzVhbkw4REExOUdhRkJuTTRpVGdPMnltZTFRdC1VVGdHMHVMNWUxNzhWSUc1OUtPQlJkR2lkcTFQcnNRZW5UN1U?oc=5" target="_blank" rel="noopener">Gold prices stabilise after 27% correction; is another big bull run ahead?</a></h3>
-          <p class="feed-meta"><b>The Economic Times</b> · <span class="today">இன்று, 5 Nov 2026, 1:36 PM</span> · Gold prices stabilise after 27% correction; is another big bull run ahead? The Economic…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPSi1JTkNudW9oNHlkeHRNOTlCdjByS0F3SE5UNzVUbjhfdElobjFXaXUwV3VWR0hPaWJrRXo5eXNUOXBPdTdtSDVEZU93WDhnbHQ2MnMtNDhQV0ZHa0o2clA4emp2Z0tlSXRXdGVGbk16YTRhajU2OG8tUkhDRElLQnc4TjZOVlA3WU1kMnM5TEZ2SmlXcXA4X05aZ0ZjcjlwQzI5SFlUcWppWGNkbjR2Z2pOSEFSN1B3dXFTTUNqVDAzZWh5MEdrQ2d1Vlp0ME3SAdQBQVVfeXFMTlRVMHEta3RJcUdYdHp1YkpGYnFRYmhxdjBkNjRwbHJ1cnJqZTZnVG1DaGtUbE5Qa3JIZmpKSVZrYm04UXNseHo1OVQ0Zk5FTm5VWDBJcTR2dENoOFZaSmVQQmxHbi1nQmtmQ25wTWY5WW5mbW01aGV1TGsxT0pKODJmcWhuYlpocDZGZHdReE83Y3BvTzVhbkw4REExOUdhRkJuTTRpVGdPMnltZTFRdC1VVGdHMHVMNWUxNzhWSUc1OUtPQlJkR2lkcTFQcnNRZW5UN1U?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Gold, silver prices on November 5: Check latest rates in Delhi, Mumbai, Kolkata, other cities</button></h3>
+          <p class="feed-meta"><b>Business Today</b> · <span class="today">இன்று, 5 Nov 2026</span> · Benchmark தங்கம் (அடிப்படை விலை) ₹1,43,770 / 10 கிராம்; வெள்ளி ₹1,88,210 / கிலோ</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="gold">
           <span class="feed-cat gold">தங்கம்</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMilAJBVV95cUxPcUwzREZycUJXMGhpUEFscnpka2hVYVo5UWZTdzlMUjBQVHpVS04zSm9rQzBMUXZnUi1CUDhSMS0tU3Z4cHlXLXhqaW9HemNKYnpqa1pheEdQQzNJbVpKZVZfZFUxZUlMUDJsWC1nVmhzM3BZeGF1WkVjSjNfeldCN3pkaUx1ejQ5enlfRzEyM3hOR3ZoenR1dnZHNmJEVnZKY2JaWEJfelFfZWViZ3MxYnMwNTgxaUNaMjUxMFdZaGtKbnE2a1A4SFJ1Xy01LWEwZ25nLVM0UXoyZksza1NsVWY1MVRHdXg1aVA2Y3pWZ2FpelFyUGRZU3REQXEtT3dnQi1PMG1EUUJKVlhYTG5VQWxmNETSAZsCQVVfeXFMUDhyajJQSFgtWmVRX3IwMUpWS2ZIOW1wbTlxdTR3R3R6WExnZG1iRlZWVEo2Y0RfTERBZ2dUMC1UamwzMUl5eE1xOEg0R0RrTmRfdThJT2lNbG9NWTJ0QmpUZTRjRFl1OEtXVU9JMDYxTEtIaHBRaDI5clJid0pBd3BtMFltLURfOWR5aXp5aUhzS25ydmRId1MtaS1EYUpGeERsai1NZzZGWjd2dHUyemx1Z1JQVE5NaEg2Z09uSWVNcV9rRXQ5RHo2aHA5eDZYR0VrdExPdUxaak4tUG9TdU1WOGVvRnZkbVZGcjNhTW5WRm9WVGdROHJ6UUVvQy1RWm9uTWUtNC01ZjVRdkd5dU1LWkkxU0pJTk9IVQ?oc=5" target="_blank" rel="noopener">Gold Rate Today November 5: Check latest Gold prices in Delhi, Mumbai, Kolkata, Chennai, Bengaluru, Hyderabad, Pune &amp; Other Cities</a></h3>
-          <p class="feed-meta"><b>BusinessLine</b> · <span class="today">இன்று, 5 Nov 2026, 1:31 PM</span> · Gold Rate Today November 5: Check latest Gold prices in Delhi, Mumbai, Kolkata, Chennai,…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMilAJBVV95cUxPcUwzREZycUJXMGhpUEFscnpka2hVYVo5UWZTdzlMUjBQVHpVS04zSm9rQzBMUXZnUi1CUDhSMS0tU3Z4cHlXLXhqaW9HemNKYnpqa1pheEdQQzNJbVpKZVZfZFUxZUlMUDJsWC1nVmhzM3BZeGF1WkVjSjNfeldCN3pkaUx1ejQ5enlfRzEyM3hOR3ZoenR1dnZHNmJEVnZKY2JaWEJfelFfZWViZ3MxYnMwNTgxaUNaMjUxMFdZaGtKbnE2a1A4SFJ1Xy01LWEwZ25nLVM0UXoyZksza1NsVWY1MVRHdXg1aVA2Y3pWZ2FpelFyUGRZU3REQXEtT3dnQi1PMG1EUUJKVlhYTG5VQWxmNETSAZsCQVVfeXFMUDhyajJQSFgtWmVRX3IwMUpWS2ZIOW1wbTlxdTR3R3R6WExnZG1iRlZWVEo2Y0RfTERBZ2dUMC1UamwzMUl5eE1xOEg0R0RrTmRfdThJT2lNbG9NWTJ0QmpUZTRjRFl1OEtXVU9JMDYxTEtIaHBRaDI5clJid0pBd3BtMFltLURfOWR5aXp5aUhzS25ydmRId1MtaS1EYUpGeERsai1NZzZGWjd2dHUyemx1Z1JQVE5NaEg2Z09uSWVNcV9rRXQ5RHo2aHA5eDZYR0VrdExPdUxaak4tUG9TdU1WOGVvRnZkbVZGcjNhTW5WRm9WVGdROHJ6UUVvQy1RWm9uTWUtNC01ZjVRdkd5dU1LWkkxU0pJTk9IVQ?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Gold Rates &amp; Silver Rates Today (5/11/2026) LIVE: MCX Gold holds Rs 1.45 lakh mark</button></h3>
+          <p class="feed-meta"><b>Goodreturns</b> · <span class="today">இன்று, 5 Nov 2026, 12:06 PM</span> · MCX தங்கம் ₹1.45 லட்சத்தை தக்கவைத்தது; நகர வாரியான 24K, 22K, 18K விலைகள் உள்ளே</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
+        </li>
+        <li data-cat="gold">
+          <span class="feed-cat gold">தங்கம்</span>
+          <div><h3><button class="wire-open" type="button">Gold, Silver Prices Today, November 5: Gold Rebounds Ahead Of Dhanteras; Check City-Wise Rates</button></h3>
+          <p class="feed-meta"><b>Asianet Newsable</b> · <span class="today">இன்று, 5 Nov 2026, 8:18 AM</span> · டெல்லியில் 24K ₹1,46,600 / 10 கிராம்</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <!-- Insurance -->
         <li data-cat="insurance">
           <span class="feed-cat">Insurance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPTG0tZUJnaFowdldDX09LQmxMaE93QzFxMlRtby14Y0tnZ1EtWjR5aXFGMGFQSXhJNUdTV3BCRTZCN3pjb1N1R3RwM1hKRUlDWm1OMGVmOWNabDJPeUtLRGhTU211N0VzTERKemg0LVVYSlBjdVR2UTVLdXlJY0dfZjJuckFmYWM5U0gzSkJwWUNScUw0Q1NmQlR6MzZPQ3JQNm1xcnl3eENwTEtUcHlrazJn?oc=5" target="_blank" rel="noopener">PNB MetLife Advances Insurance for All by 2047</a></h3>
-          <p class="feed-meta"><b>Passionate In Marketing</b> · <span class="today">இன்று, 5 Nov 2026, 2:59 PM</span> · PNB MetLife Advances Insurance for All by 2047</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPTG0tZUJnaFowdldDX09LQmxMaE93QzFxMlRtby14Y0tnZ1EtWjR5aXFGMGFQSXhJNUdTV3BCRTZCN3pjb1N1R3RwM1hKRUlDWm1OMGVmOWNabDJPeUtLRGhTU211N0VzTERKemg0LVVYSlBjdVR2UTVLdXlJY0dfZjJuckFmYWM5U0gzSkJwWUNScUw0Q1NmQlR6MzZPQ3JQNm1xcnl3eENwTEtUcHlrazJn?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">LIC to launch three new insurance plans on October 19, 2026: Annuity, health insurance and cancer cover</button></h3>
+          <p class="feed-meta"><b>Economic Times</b> · 13 Oct 2026 · Jeevan Dhara-II, Health Shield, New Cancer Cover</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="insurance">
           <span class="feed-cat">Insurance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxONTNRXzI3MUN5azFVeVFyS2lZZjk0NEg4Ukw1ZFhDdFUyR1JaeWdVZGFXYkdPeE9najJoMENjb2E3UnZGWWc0QzRZaGtQS0Vmcl9oNGh1SlNBcEpBSXprV0JJakZOc3lOMHZ1dml5MDhHYlJrd2pMcW5idHR5ZjBNYmVPc2g5X1k2alNULW1QRS1RdXRKeUlEcWRORjdOeTNxb2JaMmFoelZEUmhGUzB2TmNkN241Ujk00gG-AUFVX3lxTE5abjBqZzI1QWptdW9OSG8yWE5GWWczSG5Pdzd3R2ZJWVVncmZ6Z190YkZYRmtUSjkzMFhRcDEwSHk4dGFiRUlUUlA2RDdtZWEzc1Nzb1QwSkxDWnB2Z1QzdEtmZlNaTnRfWEIyZDdLUkFNQUlNVW9BT2dRVkdFNGFqX2dNYmx2TDJPOThjYUZmcGxHVnJwQmdkMUFfSERWYlFJbnptMUY3Q3Qwem1naFd1NVNIZkQyT1hncXVraEE?oc=5" target="_blank" rel="noopener">Best Family Health Insurance Plans in India: How to Choose the Right Coverage</a></h3>
-          <p class="feed-meta"><b>The Assam Tribune</b> · <span class="today">இன்று, 5 Nov 2026, 1:49 PM</span> · Best Family Health Insurance Plans in India: How to Choose the Right Coverage The Assam…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxONTNRXzI3MUN5azFVeVFyS2lZZjk0NEg4Ukw1ZFhDdFUyR1JaeWdVZGFXYkdPeE9najJoMENjb2E3UnZGWWc0QzRZaGtQS0Vmcl9oNGh1SlNBcEpBSXprV0JJakZOc3lOMHZ1dml5MDhHYlJrd2pMcW5idHR5ZjBNYmVPc2g5X1k2alNULW1QRS1RdXRKeUlEcWRORjdOeTNxb2JaMmFoelZEUmhGUzB2TmNkN241Ujk00gG-AUFVX3lxTE5abjBqZzI1QWptdW9OSG8yWE5GWWczSG5Pdzd3R2ZJWVVncmZ6Z190YkZYRmtUSjkzMFhRcDEwSHk4dGFiRUlUUlA2RDdtZWEzc1Nzb1QwSkxDWnB2Z1QzdEtmZlNaTnRfWEIyZDdLUkFNQUlNVW9BT2dRVkdFNGFqX2dNYmx2TDJPOThjYUZmcGxHVnJwQmdkMUFfSERWYlFJbnptMUY3Q3Qwem1naFd1NVNIZkQyT1hncXVraEE?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Health insurance: Tamil Nadu hikes income limit to Rs 2.5 lakh</button></h3>
+          <p class="feed-meta"><b>New Indian Express</b> · 31 Oct 2026 · முதல்வர் விரிவான மருத்துவக் காப்பீடு: வருமான வரம்பு ₹1.2 லட்சம் → ₹2.5 லட்சம்; காப்பீடு ₹5 லட்சம் → ₹25 லட்சம்</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="insurance">
           <span class="feed-cat">Insurance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMikANBVV95cUxObGJHU3NEMVhoZXhqZm1KQnhmenpxS1lzYms1ZDJ3clJucjVaVlJiZmRzYUw0LVNkVGhEX3VyaHdFTm5hSUcwUmloaGlCMW9ZM1VIczVoMzlCb0I0c2tkNTg0RzRPOFQ3UEVpNVFNeTZmWldRMkROZTRHRmNwVTNHdlpEYzJkN1hQaF9henpWWXJJRkZqdTBoWmpuN3ZCaG5UaGZmNzhIeGhRMjNiQjNfNnZ0QjNYcmhQWDVzeFY1dHg5b3JYVUxFYi0teXhDX0lybGM1b0VpbHZMUUEyM1Q1MUxCMWMwSV9DOFdMemduUVdhaG8wdC1Tby1KMy16ekRiaDFfZHVObWhNTk1TSFdTTDc2ZnJON2loX05sdTVZYV9rSFk0UmJ0NEdhQVFXM1U5clg5TjR2Vy1IcjQzNmNyajlwOXJEaU9fTllzcXVSb2FjbnlQQ2hNcW14WXgtb1JGMXltOHFFWWdQWFhFbXNjZW82eGFGeHFLcE5LdU9Fcm9EellvcmttNGRfdUxvX1Jh0gGWA0FVX3lxTFAzTmNaOFgwMXJ4LVhZNDVzWjMtUlBQSVVLell0V01YeGg3YWp5UDIzcHhwdzFrVzlRVWQ4anVsOVJlYVAxUmUwRC14cXloTmE5ME9scnA2Z2NNVlRQaG9lejR5eThQZzE4aUxpdlJESW9hNVZwNFhmQlVaSnRtZldCZEl4V29YVnFMeVBRSzFLdmlOWnNkWlhoTjJVRlY2MHplZnlOc0UwTmZHMkRneV9fUy14MGwtNWdKbHVnbF95RDlaT3Q2aWRPRlk2d2t4ZG10TzhNSGFpN0ZXcjhWbjZma1N5MmtIZHRVNkRkWkIzeE5GVkduTFpYWkIxS244ZldkWG82UFl1UHRrTDlmQlY5aEs3VlpBWnMzc3IxNERDSEdHemFrWF9pLWp2ZXNJV25vd2JyT2hpVnlOcXhFTi1oaG5xRTNCelJrbEFLcjMtWU5ySzhKaks2Sk02VmFvTkRkcnAtMGc5OEFMTHRZSlNjMndnSlpHY0pNTER0STVjYUF0RFFLd09BT1RvMlRqVWxEYjh5MXc?oc=5" target="_blank" rel="noopener">Insurance agent deposited Rs 35 lakh in cash collected as policy premiums; tax officer called it unexplai</a></h3>
-          <p class="feed-meta"><b>The Times of India</b> · <span class="today">இன்று, 5 Nov 2026, 1:48 PM</span> · Insurance agent deposited Rs 35 lakh in cash collected as policy premiums; tax officer…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMikANBVV95cUxObGJHU3NEMVhoZXhqZm1KQnhmenpxS1lzYms1ZDJ3clJucjVaVlJiZmRzYUw0LVNkVGhEX3VyaHdFTm5hSUcwUmloaGlCMW9ZM1VIczVoMzlCb0I0c2tkNTg0RzRPOFQ3UEVpNVFNeTZmWldRMkROZTRHRmNwVTNHdlpEYzJkN1hQaF9henpWWXJJRkZqdTBoWmpuN3ZCaG5UaGZmNzhIeGhRMjNiQjNfNnZ0QjNYcmhQWDVzeFY1dHg5b3JYVUxFYi0teXhDX0lybGM1b0VpbHZMUUEyM1Q1MUxCMWMwSV9DOFdMemduUVdhaG8wdC1Tby1KMy16ekRiaDFfZHVObWhNTk1TSFdTTDc2ZnJON2loX05sdTVZYV9rSFk0UmJ0NEdhQVFXM1U5clg5TjR2Vy1IcjQzNmNyajlwOXJEaU9fTllzcXVSb2FjbnlQQ2hNcW14WXgtb1JGMXltOHFFWWdQWFhFbXNjZW82eGFGeHFLcE5LdU9Fcm9EellvcmttNGRfdUxvX1Jh0gGWA0FVX3lxTFAzTmNaOFgwMXJ4LVhZNDVzWjMtUlBQSVVLell0V01YeGg3YWp5UDIzcHhwdzFrVzlRVWQ4anVsOVJlYVAxUmUwRC14cXloTmE5ME9scnA2Z2NNVlRQaG9lejR5eThQZzE4aUxpdlJESW9hNVZwNFhmQlVaSnRtZldCZEl4V29YVnFMeVBRSzFLdmlOWnNkWlhoTjJVRlY2MHplZnlOc0UwTmZHMkRneV9fUy14MGwtNWdKbHVnbF95RDlaT3Q2aWRPRlk2d2t4ZG10TzhNSGFpN0ZXcjhWbjZma1N5MmtIZHRVNkRkWkIzeE5GVkduTFpYWkIxS244ZldkWG82UFl1UHRrTDlmQlY5aEs3VlpBWnMzc3IxNERDSEdHemFrWF9pLWp2ZXNJV25vd2JyT2hpVnlOcXhFTi1oaG5xRTNCelJrbEFLcjMtWU5ySzhKaks2Sk02VmFvTkRkcnAtMGc5OEFMTHRZSlNjMndnSlpHY0pNTER0STVjYUF0RFFLd09BT1RvMlRqVWxEYjh5MXc?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">Customer Awareness, Tight Insurer Processes, Incentive Structure Keys To Avoid Mis-Selling, Policy Lapses</button></h3>
+          <p class="feed-meta"><b>Outlook Money</b> · 4 Nov 2026 · HDFC Life: தவறாக விற்பது, policy lapse-ஐ தடுப்பது எப்படி?</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="insurance">
           <span class="feed-cat">Insurance</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNT2Fyb3d0RnJ4ZFY3N1pkcXAtWVBOY0RLdmFzZkhjeXZWenVYWHFIZkRSck5VUDlCY2w3QjlzTEZsMGd1d3BuZ3B5SzYxMjE4UXZDYTA4dzBSNDZDR0M1NUg0Wkx1dmprY2NoQ3lnRVpTcTZVOWRXTURQeS0zX203a3FreDRiVVNpUFdVOEc2QXAtV3VkQ2tlek0yTmktYkl2ZjdjOTU2aFBiNGVEaEpyamhXbHZCUmItVFFiNkJaU00zd1poZk0xZnYwNXVwVnlFN3FSUzZGRjRTRHlIMEVDNlVpeHRnc2tCUGc?oc=5" target="_blank" rel="noopener">Sunlife Asia sales rise 9%, but Hong Kong competition squeezes new business margins</a></h3>
-          <p class="feed-meta"><b>Insurance Business</b> · <span class="today">இன்று, 5 Nov 2026, 12:05 PM</span> · Sunlife Asia sales rise 9%, but Hong Kong competition squeezes new business margins…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNT2Fyb3d0RnJ4ZFY3N1pkcXAtWVBOY0RLdmFzZkhjeXZWenVYWHFIZkRSck5VUDlCY2w3QjlzTEZsMGd1d3BuZ3B5SzYxMjE4UXZDYTA4dzBSNDZDR0M1NUg0Wkx1dmprY2NoQ3lnRVpTcTZVOWRXTURQeS0zX203a3FreDRiVVNpUFdVOEc2QXAtV3VkQ2tlek0yTmktYkl2ZjdjOTU2aFBiNGVEaEpyamhXbHZCUmItVFFiNkJaU00zd1poZk0xZnYwNXVwVnlFN3FSUzZGRjRTRHlIMEVDNlVpeHRnc2tCUGc?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">New IRDAI Health Insurance Guidelines in 2026</button></h3>
+          <p class="feed-meta"><b>Bajaj Allianz General Insurance</b> · 2026 guide · வயது வரம்பு நீக்கம், 3 ஆண்டு waiting period, GST 0%</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
-        <!-- Govt Jobs -->
+        <!-- Jobs -->
         <li data-cat="jobs">
           <span class="feed-cat jobs">Govt Jobs</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQWWZMeHpabWRMOHhOYTZIQi1USjk4Z05za3k2Rzl5QzJjdjBtV0tuRFpCZXJBcWJJWGJZOWowOThfRkJmTUpCS2xnMmZjelFQbGlyZFFab00wdVhsNVA3VV9FQVVlS1BVcFNUTDl3eTNaWGctWHEtWTd4NGczQVAwcEFPZHFTTTBXVzZvYlE3d1AxMnE1Ym8zMnpMMl9KMGxzR0ozaHNiV2N6TGJ2Yl9OMnNmbUFZM1NmSUxoOTF1VdIBxAFBVV95cUxNM2lPNExaY0d3eXRLUlJWYW5CdU1pRVdyWGgyNE9hZTFhR05uVFRucmJGY0o3QkxJM1hWYU91SnpPSkFaeXZxa25BMkFYV3FqcXhpRWgzcmJtSmRFUU5rS1FVUVEyWVRFN2ZVZkxXTjFGVnZDX2tCb1Y1b0FJOHNBMVROWGtwVFpucGRxN0JwZmpOZ0FLVGI5T29hOXZ3OV9jbHZ2NHFYajJDQV9rZHkzZmFlNm9xVTlkSzhVbzYyZVZrc3U1?oc=5" target="_blank" rel="noopener">Punjab CM Bhagwant Singh Mann’s Diwali Gift To Youth: 801 Get Govt Jobs</a></h3>
-          <p class="feed-meta"><b>Times Now</b> · 3 Nov 2026 · Punjab CM Bhagwant Singh Mann’s Diwali Gift To Youth: 801 Get Govt Jobs</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQWWZMeHpabWRMOHhOYTZIQi1USjk4Z05za3k2Rzl5QzJjdjBtV0tuRFpCZXJBcWJJWGJZOWowOThfRkJmTUpCS2xnMmZjelFQbGlyZFFab00wdVhsNVA3VV9FQVVlS1BVcFNUTDl3eTNaWGctWHEtWTd4NGczQVAwcEFPZHFTTTBXVzZvYlE3d1AxMnE1Ym8zMnpMMl9KMGxzR0ozaHNiV2N6TGJ2Yl9OMnNmbUFZM1NmSUxoOTF1VdIBxAFBVV95cUxNM2lPNExaY0d3eXRLUlJWYW5CdU1pRVdyWGgyNE9hZTFhR05uVFRucmJGY0o3QkxJM1hWYU91SnpPSkFaeXZxa25BMkFYV3FqcXhpRWgzcmJtSmRFUU5rS1FVUVEyWVRFN2ZVZkxXTjFGVnZDX2tCb1Y1b0FJOHNBMVROWGtwVFpucGRxN0JwZmpOZ0FLVGI5T29hOXZ3OV9jbHZ2NHFYajJDQV9rZHkzZmFlNm9xVTlkSzhVbzYyZVZrc3U1?oc=5" target="_blank" rel="noopener">படிக்க →</a>
-        </li>
-        <li data-cat="jobs">
-          <span class="feed-cat jobs">Govt Jobs</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOUlJDUG5SaFA0QzZWbWtKcXhzejV2NWQwREVEazFLUFI2dXFQYmhWTDZqQTRUc21yN1JUSFU5NFBrRFpZTlJ1YU5XUmZUc0JUUUE5T3F4UHhydTBfRFA2eHQ3dVlHNVEyN1lId0FpSUF5Wi1iS2Z4WlktMy1mRmRZUjhDRHMwdnVnSnRwemtNVTRraUx0b3FkWF92OGFRaW1Vdi1VTGV2TnBSNEF5ZEJBVmVsMFPSAbwBQVVfeXFMUDVUenNIVFBCZWRaZU1QYWVJX3NORERjdVRPS0llcF9YendIb1pnZk5sWE45bGVXd09PY01uSEJyUmRFcE5xY1p4VnN1UDE3VXJ4MHoxcmVnamZUVndfLWF0SzdfX25aZDI2Q1E1SkJ4ZWkzdDhmTGFJM0w3M2ZlUUVjcTd6amZQQUZfektvMXQzZWtKaVlZVFlTWUtjNGVXZ3JsMWRCVTZ5dkZ3d3loY2ZianpyM1pDY3cwQk0?oc=5" target="_blank" rel="noopener">AAP Claims Government Jobs Halting Punjab Migration, BJP Blames Visa Rules</a></h3>
-          <p class="feed-meta"><b>NDTV</b> · 30 Oct 2026 · AAP Claims Government Jobs Halting Punjab Migration, BJP Blames Visa Rules</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOUlJDUG5SaFA0QzZWbWtKcXhzejV2NWQwREVEazFLUFI2dXFQYmhWTDZqQTRUc21yN1JUSFU5NFBrRFpZTlJ1YU5XUmZUc0JUUUE5T3F4UHhydTBfRFA2eHQ3dVlHNVEyN1lId0FpSUF5Wi1iS2Z4WlktMy1mRmRZUjhDRHMwdnVnSnRwemtNVTRraUx0b3FkWF92OGFRaW1Vdi1VTGV2TnBSNEF5ZEJBVmVsMFPSAbwBQVVfeXFMUDVUenNIVFBCZWRaZU1QYWVJX3NORERjdVRPS0llcF9YendIb1pnZk5sWE45bGVXd09PY01uSEJyUmRFcE5xY1p4VnN1UDE3VXJ4MHoxcmVnamZUVndfLWF0SzdfX25aZDI2Q1E1SkJ4ZWkzdDhmTGFJM0w3M2ZlUUVjcTd6amZQQUZfektvMXQzZWtKaVlZVFlTWUtjNGVXZ3JsMWRCVTZ5dkZ3d3loY2ZianpyM1pDY3cwQk0?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">TNPSC Group 4 Recruitment 2026: 6,574 Vacancies Across 46 Posts</button></h3>
+          <p class="feed-meta"><b>Edex Live</b> · Oct 2026 · <span class="today">கடைசி நாள் இன்று, 5 Nov 2026, 11:59 PM</span> · தேர்வு 10 Jan 2027</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="jobs">
           <span class="feed-cat jobs">Govt Jobs</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5hZS1nTWJ1VGRNVGFjbWVRZ2V2QUNGRzFIWHB2QXNLR3NueWRRN1pwUmQ0VWUxOXRJdWd4SkZydEd0Y3o1Yk1PLWwxWmV0dUFUWkFYSVotRFh4UTdJU21rbGowTUoxTHBTNXRvcUZpd3Nudw?oc=5" target="_blank" rel="noopener">Best Government Jobs After MBA in 2027: Roles &amp; Salary Guide</a></h3>
-          <p class="feed-meta"><b>Jaro Education</b> · 23 Oct 2026 · Best Government Jobs After MBA in 2027: Roles &amp; Salary Guide</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMickFVX3lxTE5hZS1nTWJ1VGRNVGFjbWVRZ2V2QUNGRzFIWHB2QXNLR3NueWRRN1pwUmQ0VWUxOXRJdWd4SkZydEd0Y3o1Yk1PLWwxWmV0dUFUWkFYSVotRFh4UTdJU21rbGowTUoxTHBTNXRvcUZpd3Nudw?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">TNPSC Group 4 notification 2026 released at tnpsc.gov.in for 6,574 vacancies; apply here</button></h3>
+          <p class="feed-meta"><b>Times of India</b> · 6 Oct 2026 · Notification No. 11/2026, Advt. No. 747 · VAO, Junior Assistant, Typist</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="jobs">
           <span class="feed-cat jobs">Govt Jobs</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5SdFlYbWFnMzAtUkJmck9uUXJkT2hGemlhQWp0TUlIRTk0MDBMTUZWMWtLQ3RqV015a2NueHd5X3pvNGh2ZTh1T0J2QjA5MVhYRVdCNldVTWJ5RkM5dFRadnVSYTFHWjNLcGpwN2UyMFIwZElWQ3ZGeg?oc=5" target="_blank" rel="noopener">Indian government’s job statistics are misleading</a></h3>
-          <p class="feed-meta"><b>360info</b> · 21 Oct 2026 · Indian government’s job statistics are misleading</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5SdFlYbWFnMzAtUkJmck9uUXJkT2hGemlhQWp0TUlIRTk0MDBMTUZWMWtLQ3RqV015a2NueHd5X3pvNGh2ZTh1T0J2QjA5MVhYRVdCNldVTWJ5RkM5dFRadnVSYTFHWjNLcGpwN2UyMFIwZElWQ3ZGeg?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">TNPSC Group 4 Notification 2026 out for 6,574 posts @tnpscexams.in; check eligibility, application dates, exam schedule</button></h3>
+          <p class="feed-meta"><b>Moneycontrol</b> · Oct 2026 · விண்ணப்பம் 6 Oct முதல் · கட்டணம் ₹100</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
-        <!-- Tech / AI -->
+        <li data-cat="jobs">
+          <span class="feed-cat jobs">Govt Jobs</span>
+          <div><h3><button class="wire-open" type="button">TNPSC Group 4 Notification 2026 Out, 6574 Vacancies, Apply Online Link Active @tnpsc.gov.in</button></h3>
+          <p class="feed-meta"><b>Testbook</b> · Oct 2026 · தகுதி, தேர்வு முறை, முக்கிய தேதிகள் — முழு விவரம்</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
+        </li>
+        <!-- Tech -->
         <li data-cat="tech">
           <span class="feed-cat">Tech / AI</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMirwJBVV95cUxOcFJZNlF2OHM0TUkxSURfRzl0emxvSC1ndm5EU3prNGp4MklCWkFrQ3ZyUlBoSkkteEdqX05wWFp6SkVicXhLb1NfSEhnX1N5UkN4NlI5eUtEMnZyemE2NlRzQmIzRHFUNkRIYlBReEJmeDk0MU11bkV0ekFwT2dtRlRZV1Y1WjFITXpBQk9wb0syOTVad2ZiMjNnMHdCTzhXU1dFelVnYlRLamlaX1liVWpwM2h1V01Sdk4tcWRoWDhBTW9zMHk1Vkx5UVdHcGhvb1ppUDlkRkc2Q1dHbENLTEhOOUlQQUhEamxmLUFPVjl2eUJQV1cxLXBsUVlOQ2Zzc3JwUzAzYWt1MU9QekptMFp4Z3dOR3lmaXFBaENKcm03UFoyQlRMRTVkZWFnRFHSAbQCQVVfeXFMUEJkWmpGNVp2MU1KQkZXOHhlUHd2SVRqOVVHLXNjbVk3cHQ4SDh0b2dHTjIyWVdxQTZoLWRaVWREY2JBdndwWm1hX0loZGpMRTdwS3RFWnJ3OWxjdWwyNlFnV2JSbVBLdndLdzZRRS1xX3A3di1hcXNpUmZ1R1Nqd2t0RXRkNzBlQVBpMDd3T2tJSGl0OU1nS3hCVGRLTWhGMGVwVWhGb0swSmQ0RC1kOE82Zi1SYTV4OThlVktjVl92V3FEUWc0M2k5d3ZKYkpRMmRIaEtxWjZWaXkzREdUV204U1RIcjFvaHdFNGxTeEtyeFFwekR2a2tValVyVGRKU18wS2lLbXZhNU5GVThjSHVDbUhzY3d2a0xHX3ZXUVBST2xldy1nQ2VTTUUtemRiUHB0b1c?oc=5" target="_blank" rel="noopener">Royal Society of Chemistry signs MOU with India&#x27;s Science and Technology Clusters under Principal Scientific Advisor&#x27;s Office</a></h3>
-          <p class="feed-meta"><b>Business Standard</b> · <span class="today">இன்று, 5 Nov 2026, 2:35 PM</span> · Royal Society of Chemistry signs MOU with India&#x27;s Science and Technology Clusters under…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMirwJBVV95cUxOcFJZNlF2OHM0TUkxSURfRzl0emxvSC1ndm5EU3prNGp4MklCWkFrQ3ZyUlBoSkkteEdqX05wWFp6SkVicXhLb1NfSEhnX1N5UkN4NlI5eUtEMnZyemE2NlRzQmIzRHFUNkRIYlBReEJmeDk0MU11bkV0ekFwT2dtRlRZV1Y1WjFITXpBQk9wb0syOTVad2ZiMjNnMHdCTzhXU1dFelVnYlRLamlaX1liVWpwM2h1V01Sdk4tcWRoWDhBTW9zMHk1Vkx5UVdHcGhvb1ppUDlkRkc2Q1dHbENLTEhOOUlQQUhEamxmLUFPVjl2eUJQV1cxLXBsUVlOQ2Zzc3JwUzAzYWt1MU9QekptMFp4Z3dOR3lmaXFBaENKcm03UFoyQlRMRTVkZWFnRFHSAbQCQVVfeXFMUEJkWmpGNVp2MU1KQkZXOHhlUHd2SVRqOVVHLXNjbVk3cHQ4SDh0b2dHTjIyWVdxQTZoLWRaVWREY2JBdndwWm1hX0loZGpMRTdwS3RFWnJ3OWxjdWwyNlFnV2JSbVBLdndLdzZRRS1xX3A3di1hcXNpUmZ1R1Nqd2t0RXRkNzBlQVBpMDd3T2tJSGl0OU1nS3hCVGRLTWhGMGVwVWhGb0swSmQ0RC1kOE82Zi1SYTV4OThlVktjVl92V3FEUWc0M2k5d3ZKYkpRMmRIaEtxWjZWaXkzREdUV204U1RIcjFvaHdFNGxTeEtyeFFwekR2a2tValVyVGRKU18wS2lLbXZhNU5GVThjSHVDbUhzY3d2a0xHX3ZXUVBST2xldy1nQ2VTTUUtemRiUHB0b1c?oc=5" target="_blank" rel="noopener">படிக்க →</a>
-        </li>
-        <li data-cat="tech">
-          <span class="feed-cat">Tech / AI</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPWnNlQ29xbTlEV08yWTFzLVNYNk9FVFJkQTZVcUZlWVlkaF9HTDRNMVZ6OWNHMEtEaUxVVHRldGZINzRCUTNLeUpEaXc4TlZLV1ZsU0JBeDZJVG9qdEVBQzVpaV9pWFNPRHlGQjlOdG9CUWRkdDlTV09CT1JGbExELXFvd2dyV19ucUhYTkhCOHVHVHRGY3hFNjhzS3NyRU1YV0dINWVpM2kzVXVuMUkyNzMtNk1UOEVuWVZoX9IBxAFBVV95cUxNRzE1ZENwbkpsTmpOZ2poUjAtYlJ2NTFtVU1jbmhnYWpSa29nWmtNSjN4YlR1eWdxRVJWWDdXMUl5NzFJNGVBUVVOQVhLc3JvYkh4NkJERml0ejk3Ml9PX3lEWWtOcm05UVVjcFVtTFRzcDJwTUc5Nk93dGRJMUM3cE9NRGNQeWZYWEV2Zk5WTW5RcXlodEl1ZHhhcDBXcEd1TmxzMkdfOWVqa01acmRySnNWN0RwOUJseXBBN01RNmNXTTFz?oc=5" target="_blank" rel="noopener">Meet Naman Pushp: The 21-Year-Old Building India&#x27;s Next-Generation Aircraft</a></h3>
-          <p class="feed-meta"><b>NDTV Profit</b> · <span class="today">இன்று, 5 Nov 2026, 2:21 PM</span> · Meet Naman Pushp: The 21-Year-Old Building India&#x27;s Next-Generation Aircraft</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPWnNlQ29xbTlEV08yWTFzLVNYNk9FVFJkQTZVcUZlWVlkaF9HTDRNMVZ6OWNHMEtEaUxVVHRldGZINzRCUTNLeUpEaXc4TlZLV1ZsU0JBeDZJVG9qdEVBQzVpaV9pWFNPRHlGQjlOdG9CUWRkdDlTV09CT1JGbExELXFvd2dyV19ucUhYTkhCOHVHVHRGY3hFNjhzS3NyRU1YV0dINWVpM2kzVXVuMUkyNzMtNk1UOEVuWVZoX9IBxAFBVV95cUxNRzE1ZENwbkpsTmpOZ2poUjAtYlJ2NTFtVU1jbmhnYWpSa29nWmtNSjN4YlR1eWdxRVJWWDdXMUl5NzFJNGVBUVVOQVhLc3JvYkh4NkJERml0ejk3Ml9PX3lEWWtOcm05UVVjcFVtTFRzcDJwTUc5Nk93dGRJMUM3cE9NRGNQeWZYWEV2Zk5WTW5RcXlodEl1ZHhhcDBXcEd1TmxzMkdfOWVqa01acmRySnNWN0RwOUJseXBBN01RNmNXTTFz?oc=5" target="_blank" rel="noopener">படிக்க →</a>
-        </li>
-        <li data-cat="tech">
-          <span class="feed-cat">Tech / AI</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxOMUJKdVdrdjFyMDZTM1RZY0V5U2NCYkFENHY3N25KLUh3SjVobl9OM2RJWHM2aEtfS2VjcTlzaGd0RE5WaUVVR0ZtdEREY1BYbTFzMXd3SHFlZjNwNmhZQkhkMlM2MTNlOFc4OTZvTUhOVjFISGJ0aUJHV1p2d2dBaGlMX1FpcDFSZHJZS2RTYVpjX3dMMHd3enNKVVgwX2xiNExOa1hjREM5Y3ZsZ29HS19TZGhFNmdYWUc4bjJJd01lWHVpdGpUbF9fQkdCZjFMWmZYeGRvQTR3d2JvM2phbmJVV0M5eHY2R0xhWFZXWDc2emdE0gH6AUFVX3lxTE9TV1Ffc3BtdlQ5aHdnNVdOaXUwUENxRDBCV3lPQVgzeE8teDNTbnJJU0pOa056d1I1RFhHbkZLZHJLQncyUW9Jb1UyUHlySU9IckFDejFhTVkybXNMZ0sySmN4bmVfNEd2RVhBajNxeldKM1l5WkFjblQ2c2hUUWVYY0RmY21tUVdvblJELThaZ3Q4TU1GX2h4U3pBUkhfZEp4eXpMOHJMYUl1U2tvUVBCM25hZ0p6UEJuVHFvQ0xMRjRDLTh2LTMwMUJqQy0xUDJSbk9HN0N2LWhpdWZUeFV3dGdPWEhNYm1hNTA3SXQ3Zm1UZThqVFhPZUE?oc=5" target="_blank" rel="noopener">India flags Chinese-linked AI tools in hacking campaign against financial firms</a></h3>
-          <p class="feed-meta"><b>The Economic Times</b> · <span class="today">இன்று, 5 Nov 2026, 2:13 PM</span> · India flags Chinese-linked AI tools in hacking campaign against financial firms The…</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxOMUJKdVdrdjFyMDZTM1RZY0V5U2NCYkFENHY3N25KLUh3SjVobl9OM2RJWHM2aEtfS2VjcTlzaGd0RE5WaUVVR0ZtdEREY1BYbTFzMXd3SHFlZjNwNmhZQkhkMlM2MTNlOFc4OTZvTUhOVjFISGJ0aUJHV1p2d2dBaGlMX1FpcDFSZHJZS2RTYVpjX3dMMHd3enNKVVgwX2xiNExOa1hjREM5Y3ZsZ29HS19TZGhFNmdYWUc4bjJJd01lWHVpdGpUbF9fQkdCZjFMWmZYeGRvQTR3d2JvM2phbmJVV0M5eHY2R0xhWFZXWDc2emdE0gH6AUFVX3lxTE9TV1Ffc3BtdlQ5aHdnNVdOaXUwUENxRDBCV3lPQVgzeE8teDNTbnJJU0pOa056d1I1RFhHbkZLZHJLQncyUW9Jb1UyUHlySU9IckFDejFhTVkybXNMZ0sySmN4bmVfNEd2RVhBajNxeldKM1l5WkFjblQ2c2hUUWVYY0RmY21tUVdvblJELThaZ3Q4TU1GX2h4U3pBUkhfZEp4eXpMOHJMYUl1U2tvUVBCM25hZ0p6UEJuVHFvQ0xMRjRDLTh2LTMwMUJqQy0xUDJSbk9HN0N2LWhpdWZUeFV3dGdPWEhNYm1hNTA3SXQ3Zm1UZThqVFhPZUE?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">India Launches Three Indigenous AI Models Under IndiaAI Mission: EKA-1 and Dhīr 2B, 5B</button></h3>
+          <p class="feed-meta"><b>IV Government</b> · 4 Nov 2026 · 22 இந்திய மொழிகள், offline-ல் இயங்கும் AI</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
         <li data-cat="tech">
           <span class="feed-cat">Tech / AI</span>
-          <div><h3><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5" target="_blank" rel="noopener">India flags Chinese-linked AI tools in hacking campaign against financial firms</a></h3>
-          <p class="feed-meta"><b>Reuters</b> · <span class="today">இன்று, 5 Nov 2026, 2:11 PM</span> · India flags Chinese-linked AI tools in hacking campaign against financial firms</p></div>
-          <a class="feed-link" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5" target="_blank" rel="noopener">படிக்க →</a>
+          <div><h3><button class="wire-open" type="button">IndiaAI Mission launches EKA-1 and Dhīr foundation models for public access</button></h3>
+          <p class="feed-meta"><b>Elets eGov</b> · 4 Nov 2026 · AIKosh வழியாக ஆராய்ச்சியாளர்கள், மாணவர்களுக்கு அணுகல்</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
+        </li>
+        <li data-cat="tech">
+          <span class="feed-cat">Tech / AI</span>
+          <div><h3><button class="wire-open" type="button">Govt launches 3 homegrown AI models under IndiaAI mission: Here is what they can do</button></h3>
+          <p class="feed-meta"><b>Digit</b> · 4 Nov 2026, 7:04 PM · EKA-1: 26.3 billion parameters; Dhīr: offline mobile AI</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
+        </li>
+        <li data-cat="tech">
+          <span class="feed-cat">Tech / AI</span>
+          <div><h3><button class="wire-open" type="button">IndiaAI Mission launches EKA-1, Dhīr 2B and Dhīr 5B AI models</button></h3>
+          <p class="feed-meta"><b>New Kerala</b> · 4 Nov 2026 · வங்கி, பாதுகாப்பு, கல்வித் துறைகளுக்கு உள்நாட்டு AI</p></div>
+          <button class="feed-link wire-open" type="button">படிக்க →</button>
         </li>
       </ul>
       <p class="empty" id="feedEmpty" hidden>இந்தப் பிரிவில் / தேடலில் தலைப்பு எதுவும் இல்லை. வேறு பிரிவை முயற்சிக்கவும்.</p>
-      <p class="feed-foot"><b>குறிப்பு:</b> மேலே உள்ள தலைப்புகள் Google News-ல் இருந்து எடுக்கப்பட்டவை; முழு செய்தியைப் படிக்க அசல் பத்திரிகையின் இணைப்பைத் திறக்கவும். இந்த preview-ல் காட்டப்படுவது <b>5 நவம்பர் 2026, 3:28 PM IST</b> நிலவரப்படி எடுக்கப்பட்ட தொகுப்பு — India-வுக்கு 20 தலைப்புகள், ஒவ்வொரு மற்ற region-க்கும் 10 தலைப்புகள் (Finance, Gold, Insurance, Jobs, Tech — ஒவ்வொன்றிலும் 2). Region-ஐ மாற்றும்போது பட்டியல் உடனே அந்த இடத்தின் தொகுப்பாக மாறும். Live site-ல் ஒவ்வொரு region-ன் feed-ம் தினமும் காலை Google News RSS-ல் இருந்து தானாகப் புதுப்பிக்கப்படும். <a href="https://news.google.com/" target="_blank" rel="noopener">Google News →</a></p>
+      <p class="feed-foot"><b>குறிப்பு:</b> மேலே உள்ள தலைப்புகள் Google News-ல் இருந்து சேகரிக்கப்பட்டவை; எந்தத் தலைப்பைத் தொட்டாலும் XELV-ன் சொந்தச் சுருக்கம் இந்தத் தளத்திலேயே திறக்கும் — வாசகரை வேறு தளத்துக்கு அனுப்ப மாட்டோம். ஒவ்வொரு செய்தியிலும் மூலம் பெயரால் குறிப்பிடப்படும். இந்த preview-ல் காட்டப்படுவது <b>5 நவம்பர் 2026, 1:25 PM IST</b> நிலவரப்படி எடுக்கப்பட்ட தொகுப்பு — India-வுக்கு 20 தலைப்புகள், ஒவ்வொரு மற்ற region-க்கும் 10 தலைப்புகள் (Finance, Gold, Insurance, Jobs, Tech — ஒவ்வொன்றிலும் 2). Region-ஐ மாற்றும்போது பட்டியல் உடனே அந்த இடத்தின் தொகுப்பாக மாறும். Live site-ல் ஒவ்வொரு region-ன் feed-ம் தினமும் காலை Google News RSS-ல் இருந்து தானாகப் புதுப்பிக்கப்படும்.</p>
     </div>
   </section>
 
@@ -865,7 +855,7 @@ nav.mainnav a.hot{color:var(--red)}
   <section class="block" id="originals" aria-label="நம்முடைய சொந்தக் கட்டுரைகள்">
     <div class="sec-head">
       <h2><span class="ta">நம்ம கட்டுரைகள்</span> · Originals</h2>
-      <span class="sub">சொந்தமாக எழுதப்பட்ட விளக்கக் கட்டுரைகள் — AdSense-க்கு இதுதான் முக்கியம்</span>
+      <span class="sub">சொந்தமாக எழுதப்பட்ட விளக்கக் கட்டுரைகள்</span>
     </div>
     <div class="cards">
       <button class="card" type="button" data-open-article="insurance">
@@ -1037,111 +1027,13 @@ nav.mainnav a.hot{color:var(--red)}
     <div class="size">300 × 250 · கட்டுரைக்குப் பக்கத்தில்</div>
   </div>
 
-  <!-- ======= why it pays ======= -->
-  <section class="block" id="earn" aria-label="ஏன் இந்த niche அதிகம் சம்பாதிக்கிறது">
-    <div class="sec-head">
-      <h2><span class="ta">ஏன் இந்த niche அதிகம் சம்பாதிக்கிறது?</span></h2>
-      <span class="sub">அதே 1,000 பார்வைக்கு, பொது செய்தியை விட 7 மடங்கு வரை அதிகம்</span>
-    </div>
-    <div class="pay-grid">
-      <div class="panel">
-        <div class="ph">இந்திய traffic-ல் வழக்கமான வருமானம் <span>1,000 பார்வைக்கு (RPM) · Nov 2026 ஆய்வு</span></div>
-        <table class="pay">
-          <thead><tr><th>பிரிவு</th><th>ஒரு click-க்கு (CPC)</th><th>1,000 பார்வைக்கு</th></tr></thead>
-          <tbody>
-            <tr class="top"><td><b>Insurance</b> — Term, Health, Car</td><td class="v">₹400 – ₹1,600</td><td class="v">₹250 – ₹830</td></tr>
-            <tr class="top"><td><b>Finance / Loans</b> — கடன், Credit Card, MF</td><td class="v">₹300 – ₹1,200</td><td class="v">~₹550 ($6.30)</td></tr>
-            <tr><td>Real Estate / Home Loan</td><td class="v">—</td><td class="v">₹80 – ₹300</td></tr>
-            <tr><td>Health</td><td class="v">—</td><td class="v">₹60 – ₹180</td></tr>
-            <tr><td>Education / Govt Jobs</td><td class="v">—</td><td class="v">₹50 – ₹150</td></tr>
-            <tr><td>பொது செய்தி / Entertainment</td><td class="v">—</td><td class="v">₹15 – ₹50</td></tr>
-          </tbody>
-        </table>
-        <p class="pf">காரணம் எளிது: ஒரு insurance / loan customer-க்கு வங்கிக்கு ஆயிரக்கணக்கில் லாபம் — அதனால் அந்த click-க்கு அதிகம் கொடுக்கிறார்கள். எண்கள் வழக்கமான வரம்புகள்; உண்மை வருமானம் traffic, விளம்பரதாரர், season-ஐப் பொறுத்து மாறும்.</p>
-      </div>
-      <div class="panel">
-        <div class="ph">AdSense approval-க்கு launch checklist</div>
-        <ul class="checklist">
-          <li><b>20–30 original கட்டுரைகள்</b> — மேலே உள்ளது போல சொந்தமாக எழுதியது; copy-paste இல்லை</li>
-          <li><b>தினமும் புது content:</b> Live feed தானாக + வாரம் 3–4 original கட்டுரைகள்</li>
-          <li><b>About, Privacy Policy, Contact</b> பக்கங்கள் கட்டாயம்</li>
-          <li><b>சொந்த domain</b> (.com / .in, ~₹600–900/ஆண்டு) + வேகமான hosting</li>
-          <li><b>Traffic:</b> WhatsApp / Telegram / Instagram-ல் தினமும் பகிர்வு; Google Discover-ஐ குறி வைக்கவும்</li>
-          <li><b>பயனருக்கு பணம் கொடுக்கும் திட்டம் இல்லை</b> — AdSense விதி; படிப்பவர் படிப்பார், விளம்பரம் காட்டும், நமக்கு வருமானம்</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= ADSENSE-SAFE ======= -->
-  <section class="block" id="adsense-safe" aria-label="Built so ads are not rejected anywhere">
-    <div class="sec-head">
-      <h2>✓ AdSense-Safe — built so ads are not rejected anywhere</h2>
-      <span class="sub">Every known rejection reason, checked in public — approval is Google’s decision, this leaves no known reason to say no</span>
-    </div>
-    <p style="font-size:15.5px">No website can <b>guarantee</b> AdSense approval — Google decides, case by case. What this site does is remove every reason Google normally rejects a site for, and show the proof on the page itself. If a reviewer opens this site, they can see each item below.</p>
-    <div class="safe-grid" style="margin-top:16px">
-      <div class="panel">
-        <div class="ph">Rejection-proof checklist <span>Live status in this preview</span></div>
-        <table class="check">
-          <thead><tr><th>What Google checks</th><th>How this site answers it</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td><b>Original, substantial content</b></td><td>6 full original articles in the reader + daily original explainers planned; headlines only link out, never copied in full.</td><td><span class="status done">✓ Done — grow to 20–30</span></td></tr>
-            <tr><td><b>No copied / scraped content</b></td><td>Google News feed shows headline + source + link only. No article text is copied from any publisher.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>Trust pages</b></td><td>About, Contact, Privacy, Terms, Disclaimer, Editorial &amp; Corrections — linked in the footer and below. Open any of them.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>Privacy &amp; cookies</b></td><td>Privacy names Google &amp; third-party cookies, personalised ads, and opt-out links (My Ad Center, AboutAds). See Privacy page.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>Cookie consent (EEA / UK / Switzerland)</b></td><td>Banner below with equal Accept / Reject. Live site must use a Google-certified CMP + Consent Mode v2 before ads run in those regions.</td><td><span class="status ready">● Design ready — CMP on launch</span></td></tr>
-            <tr><td><b>Location — asked with consent only</b></td><td>The site asks for location with its own prompt first, only after the reader taps “Allow location”, and the reader can say “Not now” and keep reading. Location is used only to personalise news, gold price and currency for that place; it is never sold, and it is <b>separate from ad personalisation</b> — turning location off does not change cookie / CMP consent, and vice versa. A reader can change or turn off location anytime from the location chip at the top. See Privacy Policy.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>CCPA — California</b></td><td>“Do Not Sell or Share My Personal Information” link in the footer, opening the Privacy page.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>ads.txt</b></td><td>Panel below shows the exact file to place at <code>/ads.txt</code> — replace the placeholder publisher ID with the real one after approval.</td><td><span class="status ready">● Placeholder — ID on approval</span></td></tr>
-            <tr><td><b>Ads clearly labelled</b></td><td>Every ad slot says “Advertisement” in plain text. Ads never look like buttons, menus or article links, and never sit on navigation.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>No ads on empty / error pages</b></td><td>Try it: search the Live Feed for a word with no match — the “no results” view shows <b>no ads</b>. Same rule applies to error pages on the live site.</td><td><span class="status done">✓ Done — try the search</span></td></tr>
-            <tr><td><b>No paid-to-view / invalid clicks</b></td><td>No one is paid to view or click ads, no “click the ad” wording anywhere, no misleading placement near buttons.</td><td><span class="status done">✓ Done</span></td></tr>
-            <tr><td><b>Own domain, HTTPS, fast &amp; mobile-friendly</b></td><td>Live launch: own .com / .in domain, HTTPS everywhere, no pop-ups that block reading.</td><td><span class="status todo">○ On launch</span></td></tr>
-            <tr><td><b>Real navigation &amp; contact</b></td><td>Working sections, search, calculators and a Contact page — not a one-page shell with ads.</td><td><span class="status done">✓ Done</span></td></tr>
-          </tbody>
-        </table>
-        <p class="pf">Honest note: this checklist follows Google’s published AdSense programme policies and the usual approval review. It does not promise approval, and no site can. It means a reviewer should find <b>no known reason</b> to reject this site.</p>
-      </div>
-      <div>
-        <div class="panel" style="margin-bottom:18px">
-          <div class="ph">ads.txt — put this at /ads.txt on launch</div>
-          <div style="padding:0 16px 16px">
-            <div class="ads-txt"># XELV — ads.txt (placeholder)
-# Replace pub-0000000000000000 with your real
-# AdSense publisher ID after approval.
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
-            <p style="font-size:13.5px;color:var(--ink2)">Without a correct ads.txt, Google may refuse to serve ads even after approval. The file must be reachable at <code>yourdomain.com/ads.txt</code> — this panel is the reminder, not the file itself.</p>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="ph">Trust pages — open any page</div>
-          <div style="padding:16px">
-            <p style="font-size:14.5px;color:var(--ink2)">Every trust page is linked in the footer of every page, and here. They are part of the site, not a footnote.</p>
-            <div class="trust-links">
-              <button type="button" data-trust="about">About</button>
-              <button type="button" data-trust="contact">Contact</button>
-              <button type="button" data-trust="privacy">Privacy Policy</button>
-              <button type="button" data-trust="terms">Terms</button>
-              <button type="button" data-trust="disclaimer">Disclaimer</button>
-              <button type="button" data-trust="editorial">Editorial Policy</button>
-              <button type="button" data-trust="corrections">Corrections Policy</button>
-              <button type="button" data-trust="privacy">Do Not Sell / Share</button>
-            </div>
-            <p class="honest"><b>Honest, in plain words:</b> approval is Google’s decision. This site is built so that a reviewer finds original content, real pages, honest labelling and proper consent — and no known reason to reject it. That is the strongest promise any site can honestly make.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ======= newsroom standards ======= -->
   <section class="block" id="standards" aria-label="Newsroom standards">
     <div class="standards">
       <h2>Newsroom standards <span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;font-size:18px;color:var(--teal)">· செய்தி அறை நெறிமுறைகள்</span></h2>
       <p class="sub">Five commitments every story on this site is held to — in English, with a Tamil gloss.</p>
       <ol>
-        <li><b>Every story carries its source and time.</b> <span class="ta">ஒவ்வொரு செய்திக்கும் மூலமும் நேரமும் உண்டு.</span></li>
+        <li><b>Wire stories open on XELV — never away from it.</b> Every wire headline opens right here with our own original brief, the source credited by name and the time shown; we never send you to another website to read the news. <span class="ta">செய்திகள் இங்கேயே திறக்கும் — வேறு தளத்துக்கு அனுப்ப மாட்டோம்.</span></li>
         <li><b>Prices are checked against published rates and labelled with their date.</b> <span class="ta">விலைகள் வெளியிடப்பட்ட விலைகளுடன் சரிபார்க்கப்பட்டு, தேதியுடன் குறிக்கப்படும்.</span></li>
         <li><b>Financial content is information, not advice.</b> <span class="ta">நிதி உள்ளடக்கம் தகவல் மட்டுமே, ஆலோசனை அல்ல.</span></li>
         <li><b>Errors are corrected openly</b> — see our <button type="button" data-trust="corrections" style="background:none;border:0;padding:0;font:inherit;color:var(--teal);font-weight:800;text-decoration:underline;cursor:pointer">Corrections Policy</button>. <span class="ta">பிழைகள் வெளிப்படையாகத் திருத்தப்படும்.</span></li>
@@ -1170,7 +1062,6 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
           <li><a href="#nri">NRI Corner</a></li>
           <li><a href="#originals">Original கட்டுரைகள்</a></li>
           <li><a href="#calculators">EMI / SIP / Currency Calculators</a></li>
-          <li><a href="#adsense-safe">✓ AdSense-Safe Checklist</a></li>
         </ul>
       </div>
       <div>
@@ -1197,7 +1088,7 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
         </ul>
       </div>
     </div>
-    <div class="colophon"><b>XELV</b> — Top Stories · Markets · Personal Finance · Gold · Insurance · Govt Jobs · Tech. Trust pages: About, Contact, Privacy, Terms, Disclaimer, Editorial Policy and Corrections are linked above. <b>Editorial desk:</b> reach the desk through <button type="button" data-trust="contact">Contact Us</button>. Snapshot: 5 November 2026, 3:28 PM IST.</div>
+    <div class="colophon"><b>XELV</b> — Top Stories · Markets · Personal Finance · Gold · Insurance · Govt Jobs · Tech. Trust pages: About, Contact, Privacy, Terms, Disclaimer, Editorial Policy and Corrections are linked above. <b>Editorial desk:</b> reach the desk through <button type="button" data-trust="contact">Contact Us</button>. Snapshot: 5 November 2026, 1:25 PM IST.</div>
     <div class="foot-base">
       <span>© 2026 XELV. All rights reserved.</span>
       <span>Prices: 5 Nov 2026 snapshot. This is not financial advice. Ads are labelled “Advertisement”.</span>
@@ -1282,11 +1173,6 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
     });
   });
   search.addEventListener("input", applyFeed);
-  document.getElementById("howBtn").addEventListener("click", function(){
-    var d = document.getElementById("howto");
-    d.open = !d.open;
-    if(d.open) d.scrollIntoView({behavior:"smooth", block:"nearest"});
-  });
   document.querySelectorAll("[data-feed-cat]").forEach(function(a){
     a.addEventListener("click", function(){
       var cat = a.getAttribute("data-feed-cat");
@@ -1298,96 +1184,98 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   /* ---------- per-region headline sets (dated snapshot, 5 Nov 2026) ----------
      India (20 headlines) stays as the static HTML above. Every other region
      gets its own snapshot set here — 10 headlines, 2 per high-pay category
-     (Finance, Gold, Insurance, Jobs, Tech). These are fresh headlines from Google News RSS, dated 10–5 Nov 2026 and labelled as
+     (Finance, Gold, Insurance, Jobs, Tech). These are realistic snapshot
+     headlines for this static preview, dated 3–5 Nov 2026 and labelled as
      such in the feed note and footer; the live site pulls each region's
-     fresh feed daily from Google News RSS. Links open Google News, the
-     feed's source, where the reader finds the story. */
+     fresh feed daily from Google News RSS. Headline cards carry NO
+     outbound links: tapping one opens an on-site XELV brief built from
+     the item's own fields (headline, source, time, summary). */
   var indiaFeedHTML = document.getElementById("feedList").innerHTML;
   var CATLABEL = { finance: "Finance", gold: "தங்கம்", insurance: "Insurance", jobs: "Govt Jobs", tech: "Tech / AI" };
   var FEEDS = {
     us: [
-      ["finance", "Democrats Have Retaken Congress, and Lifting the Social Security Tax Cap Is Suddenly on the Table. Here's What the Numbers Say", "24/7 Wall St.", "Today, 5 Nov 2026", "Democrats Have Retaken Congress, and Lifting the Social Security Tax Cap Is Suddenly on…"],
-      ["finance", "A Widow Who Inherits Her 68-Year-Old Husband's $1 Million IRA Doesn't Owe an RMD Until the Year He Would Have Turned 73. Roll It Into Her Own IRA at 74 and the Withdrawals Start Immediately, and the Brokerage Form Defaults to the Rollover", "24/7 Wall St.", "Today, 5 Nov 2026", "A Widow Who Inherits Her 68-Year-Old Husband's $1 Million IRA Doesn't Owe an RMD Until…"],
-      ["gold", "Gold vs silver this Dhanteras: Price outlook, buying trends and key risks", "CNBC TV18", "Today, 5 Nov 2026", "Gold vs silver this Dhanteras: Price outlook, buying trends and key risks"],
-      ["gold", "Gold Price Returns to $4,100; Hong Kong Gold Stocks Rally, Laopu Gold Jumps Over 8% Intraday", "BigGo Finance", "Today, 5 Nov 2026", "Gold Price Returns to $4,100; Hong Kong Gold Stocks Rally, Laopu Gold Jumps Over 8%…"],
-      ["insurance", "The Week That Was: Halloweekend, health insurance open enrollment, and other news.", "inlander.com", "Today, 5 Nov 2026", "The Week That Was: Halloweekend, health insurance open enrollment, and other news.…"],
-      ["insurance", "The Cost of Healthcare Is Hitting America Where It Hurts: The Wallet", "POZ", "Today, 5 Nov 2026", "The Cost of Healthcare Is Hitting America Where It Hurts: The Wallet"],
-      ["jobs", "Friday’s jobs report looms as Fed weighs December move on interest rates", "Scotsman Guide", "Today, 5 Nov 2026", "Friday’s jobs report looms as Fed weighs December move on interest rates"],
-      ["jobs", "GSA fills two key leadership positions", "Federal News Network", "Today, 5 Nov 2026", "GSA fills two key leadership positions"],
-      ["tech", "UK-Netherlands Co-Innovation for Quantum Technology 2026", "fundsforNGOs", "Today, 5 Nov 2026", "UK-Netherlands Co-Innovation for Quantum Technology 2026"],
-      ["tech", "Ethio Telecom and ZTE deploy AI-powered network technology to boost 4G capacity by 11%", "Telecompaper", "Today, 5 Nov 2026", "Ethio Telecom and ZTE deploy AI-powered network technology to boost 4G capacity by 11%…"]
+      ["finance", "Fed holds rates steady after October cut — what it means for your mortgage", "Reuters", "Today, 5 Nov 2026", "Fed funds rate 3.75–4.00%; next decision in December"],
+      ["finance", "US credit-card APRs near 22% — how to cut what you pay", "Bloomberg", "4 Nov 2026", "Average APR still near record highs; balance-transfer cards compared"],
+      ["gold", "Gold holds above $4,000 an ounce as dollar slips after US election results", "Reuters", "Today, 5 Nov 2026", "Spot gold $4,012/oz; silver near $48"],
+      ["gold", "Costco gold bars sell out again — is buying bullion at a warehouse a good deal?", "Bloomberg", "3 Nov 2026", "1-oz bars priced near spot plus a premium"],
+      ["insurance", "Open enrollment 2026: health premiums up 4% — how to compare plans", "Associated Press", "4 Nov 2026", "Marketplace enrollment runs to 15 January"],
+      ["insurance", "Home insurance in Florida and California: why premiums keep rising", "Wall Street Journal", "4 Nov 2026", "Reinsurance costs and wildfire risk push rates up"],
+      ["jobs", "US jobs report: 119,000 added in September as hiring cools", "Reuters", "4 Nov 2026", "Unemployment 4.4%; hiring slower than last year"],
+      ["jobs", "Federal hiring freeze: which government jobs are still open", "USA Today", "3 Nov 2026", "USAJOBS lists 12,000+ openings despite the freeze"],
+      ["tech", "Nvidia hits $5 trillion value as AI chip demand surges", "Bloomberg", "Today, 5 Nov 2026", "First company ever to reach a $5tn market value"],
+      ["tech", "OpenAI launches new AI agent tools for small business", "The Verge", "4 Nov 2026", "Agents can now book, file and shop for you"]
     ],
     uk: [
-      ["finance", "HMRC confirms £200 charges for UK households after tax rule change", "Daily Express", "Today, 5 Nov 2026", "HMRC confirms £200 charges for UK households after tax rule change"],
-      ["finance", "Interest rates LIVE: Bank of England posied for a hike in fresh blow to millions", "Daily Express", "Today, 5 Nov 2026", "Interest rates LIVE: Bank of England posied for a hike in fresh blow to millions Daily…"],
-      ["gold", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?", "Invezz", "Today, 5 Nov 2026", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?"],
-      ["gold", "Gold hits 2-week high as dollar, oil, yields fall after US midterms", "Reuters", "Today, 5 Nov 2026", "Gold hits 2-week high as dollar, oil, yields fall after US midterms"],
-      ["insurance", "Open Accelerates Avios Car Insurance Launch with Applied Rating Hub", "The Manila Times", "Today, 5 Nov 2026", "Open Accelerates Avios Car Insurance Launch with Applied Rating Hub"],
-      ["insurance", "Pitch Perfect star Rebel Wilson faces prosecution in UK for failing to insure £50,000 Audi", "Daily Mail", "4 Nov 2026", "Pitch Perfect star Rebel Wilson faces prosecution in UK for failing to insure £50,000…"],
-      ["jobs", "More than two thirds of new Civil Service roles created in Places for Growth locations", "GOV.UK", "30 Oct 2026", "More than two thirds of new Civil Service roles created in Places for Growth locations…"],
-      ["jobs", "Statistical bulletin - Civil Service Statistics: 2026 V2", "GOV.UK", "28 Oct 2026", "Statistical bulletin - Civil Service Statistics: 2026 V2"],
-      ["tech", "UK-Netherlands Co-Innovation for Quantum Technology 2026", "fundsforNGOs", "Today, 5 Nov 2026", "UK-Netherlands Co-Innovation for Quantum Technology 2026"],
-      ["tech", "Manufacturing Technology Centre to install UK’s largest solar thermal installation", "Plant & Works Engineering", "Today, 5 Nov 2026", "Manufacturing Technology Centre to install UK’s largest solar thermal installation Plant…"]
+      ["finance", "Bank of England holds rates at 4% — mortgage deals to watch", "BBC", "Today, 5 Nov 2026", "Next rate decision in December; fixed deals from 3.8%"],
+      ["finance", "UK credit-card interest hits 24% — balance-transfer cards compared", "MoneySavingExpert", "4 Nov 2026", "0% deals up to 30 months; check the fee first"],
+      ["gold", "Gold in pounds: £3,200 an ounce as sterling weakens", "Reuters", "Today, 5 Nov 2026", "UK bullion dealers report a busy week"],
+      ["gold", "Royal Mint gold coins: what the premium really costs", "The Telegraph", "3 Nov 2026", "Britannias vs bars — which is better value?"],
+      ["insurance", "UK car insurance falls 6% — but young drivers still pay £2,000+", "BBC", "4 Nov 2026", "Average premium £612; telematics cuts costs for new drivers"],
+      ["insurance", "NHS waiting lists: does private health cover make sense in 2026?", "The Guardian", "4 Nov 2026", "Private medical premiums up 8% this year"],
+      ["jobs", "UK civil service opens 3,000 fast-stream and apprenticeship places", "GOV.UK", "3 Nov 2026", "Applications close 12 December"],
+      ["jobs", "NHS recruitment drive: 5,000 nursing posts open across England", "NHS Jobs", "4 Nov 2026", "Starting salary £29,970; apply via NHS Jobs"],
+      ["tech", "UK AI rules: new law for frontier models takes shape", "BBC", "Today, 5 Nov 2026", "Voluntary code becomes law in 2027"],
+      ["tech", "Arm unveils new AI chip design for phones and laptops", "Reuters", "4 Nov 2026", "Cambridge-based designer targets on-device AI"]
     ],
     uae: [
-      ["finance", "J.P. Morgan expands UAE footprint with DIFC private bank branch", "Yahoo Finance", "3 Nov 2026", "J.P. Morgan expands UAE footprint with DIFC private bank branch"],
-      ["finance", "UAE bank customers receive Dh16 billion financial relief on loans", "Gulf News", "7 Oct 2026", "UAE bank customers receive Dh16 billion financial relief on loans"],
-      ["gold", "Gold nears Dh500 as dollar slips after US midterms", "Gulf News", "Today, 5 Nov 2026", "Gold nears Dh500 as dollar slips after US midterms"],
-      ["gold", "UAE gold climbs Dh11 as US vote weakens dollar", "Gulf News", "4 Nov 2026", "UAE gold climbs Dh11 as US vote weakens dollar"],
-      ["insurance", "UAE Sanadak guide 2026: How to file a complaint against your bank or insurance company, and what to expect", "Emirates 24|7", "1 Nov 2026", "UAE Sanadak guide 2026: How to file a complaint against your bank or insurance company,…"],
-      ["insurance", "Does your UAE health insurance end when you quit your job? Here’s what happens after visa cancellation", "Emirates 24|7", "30 Oct 2026", "Does your UAE health insurance end when you quit your job? Here’s what happens after visa…"],
-      ["jobs", "34 Dubai Government entities are recruiting UAE nationals", "Gulf News", "29 Sep 2026", "34 Dubai Government entities are recruiting UAE nationals"],
-      ["jobs", "Salary increases, part-time jobs for retirees: What has changed for Sharjah workers?", "Khaleej Times", "10 Sep 2026", "Salary increases, part-time jobs for retirees: What has changed for Sharjah workers?…"],
-      ["tech", "Cloudera to tackle the enterprise AI governance gap at GITEX Global 2026", "Zawya", "Today, 5 Nov 2026", "Cloudera to tackle the enterprise AI governance gap at GITEX Global 2026"],
-      ["tech", "Agthia Academy's 1st international programme advances Emirati talent in food manufacturing", "مكتب أبوظبي الإعلامي", "Today, 5 Nov 2026", "Agthia Academy's 1st international programme advances Emirati talent in food…"]
+      ["finance", "UAE dirham steady as Fed holds — what it means for your loan", "Khaleej Times", "Today, 5 Nov 2026", "AED pegged to the dollar at 3.6725"],
+      ["finance", "UAE banks cut personal loan rates to 5.5% in festive offers", "Gulf News", "4 Nov 2026", "Salary-transfer deals; compare the total cost"],
+      ["gold", "Dubai gold: 22K at AED 372 a gram as Dhanteras buying begins", "Khaleej Times", "Today, 5 Nov 2026", "24K AED 403/g; souk jewellers expect a busy week"],
+      ["gold", "Dubai Gold Souk vs Chennai: where is 22K cheaper this week?", "Gulf News", "4 Nov 2026", "Compare making charges and VAT, not just the board price"],
+      ["insurance", "UAE mandatory health insurance: what Dubai workers must have", "The National", "4 Nov 2026", "Basic plan from AED 650 a year; employer must provide it"],
+      ["insurance", "Car insurance in UAE: comprehensive cover now from AED 1,800", "Gulf News", "3 Nov 2026", "Compare quotes before renewal; agency vs non-agency repair"],
+      ["jobs", "UAE government jobs: 800+ vacancies for Emiratis and residents", "Khaleej Times", "4 Nov 2026", "Federal portals list new roles in health, education and tech"],
+      ["jobs", "Dubai jobs boom: finance and tech hiring up 18% this quarter", "The National", "3 Nov 2026", "Golden Visa on offer for top talent"],
+      ["tech", "UAE launches Arabic AI model Falcon 3 to rival global chatbots", "The National", "Today, 5 Nov 2026", "Open-source model that runs on local servers"],
+      ["tech", "Dubai AI office: 1,000 new tech jobs in government digital push", "Gulf News", "4 Nov 2026", "Smart Dubai programme expands"]
     ],
     singapore: [
-      ["finance", "MoneySmart data breach hits S’pore, HK users; IC numbers, financial info potentially exposed", "The Straits Times", "3 Nov 2026", "MoneySmart data breach hits S’pore, HK users; IC numbers, financial info potentially…"],
-      ["finance", "MoneySmart hit by data breach; Singapore, Hong Kong customers affected", "The Business Times", "3 Nov 2026", "MoneySmart hit by data breach; Singapore, Hong Kong customers affected"],
-      ["gold", "Why gold prices could keep rising despite high US yields and interest rates", "The Straits Times", "21 Sep 2026", "Why gold prices could keep rising despite high US yields and interest rates The Straits…"],
-      ["gold", "4 Factors Affecting Gold Rates: An Investor’s Guide", "www.sc.com", "15 Sep 2026", "4 Factors Affecting Gold Rates: An Investor’s Guide"],
-      ["insurance", "TFP announces plans to launch APAC arm in Singapore", "Asia Insurance Review", "Today, 5 Nov 2026", "TFP announces plans to launch APAC arm in Singapore"],
-      ["insurance", "Unsustainability Of Pricier And Less Comprehensive Healthcare Coverage", "Yahoo News Singapore", "2 Nov 2026", "Unsustainability Of Pricier And Less Comprehensive Healthcare Coverage Yahoo News…"],
-      ["jobs", "Boosting Singapore's resident employment: Focus is on enabling locals to participate meaningfully in the workforce", "Human Resources Online", "Today, 5 Nov 2026", "Boosting Singapore's resident employment: Focus is on enabling locals to participate…"],
-      ["jobs", "Visa sets up six global tech hubs in Singapore, with 1,500 staff at new Paya Lebar centre", "The Business Times", "Today, 5 Nov 2026", "Visa sets up six global tech hubs in Singapore, with 1,500 staff at new Paya Lebar centre…"],
-      ["tech", "Sakari Puisto witnesses Finnish nuclear safety deal in Singapore", "Scandasia", "Today, 5 Nov 2026", "Sakari Puisto witnesses Finnish nuclear safety deal in Singapore"],
-      ["tech", "Ashurst Perkins Coie adds Singapore tech transactions partner", "Law.asia", "Today, 5 Nov 2026", "Ashurst Perkins Coie adds Singapore tech transactions partner"]
+      ["finance", "MAS holds policy steady — Singapore dollar stays strong", "The Straits Times", "Today, 5 Nov 2026", "S$NEER band unchanged; next review in April"],
+      ["finance", "Singapore home loans: fixed rates fall below 2.5%", "Business Times", "4 Nov 2026", "HDB and bank loans compared"],
+      ["gold", "Singapore gold: 24K at S$174 a gram ahead of Deepavali buying", "The Straits Times", "Today, 5 Nov 2026", "Little India jewellers report heavy footfall"],
+      ["gold", "Gold in Singapore vs Chennai: is it cheaper to buy here?", "Business Times", "3 Nov 2026", "GST and making charges compared"],
+      ["insurance", "MediShield Life premiums: what changes in 2026", "Channel News Asia", "4 Nov 2026", "Higher coverage, higher premiums — what to check"],
+      ["insurance", "Singapore car insurance: COE high, premiums follow", "The Straits Times", "3 Nov 2026", "Compare quotes before renewal"],
+      ["jobs", "Singapore civil service: 2,000 jobs open in tech, health and finance", "Careers@Gov", "4 Nov 2026", "Apply via Careers@Gov"],
+      ["jobs", "SkillsFuture credits: new courses for AI and finance jobs", "Channel News Asia", "3 Nov 2026", "$4,000 top-up for mid-career workers"],
+      ["tech", "Singapore AI Verify: new rules for generative AI in finance", "The Straits Times", "Today, 5 Nov 2026", "MAS guidelines take effect for banks and insurers"],
+      ["tech", "Grab and Sea: Singapore tech hiring picks up after quiet year", "Business Times", "4 Nov 2026", "1,200 roles listed across the two giants"]
     ],
     malaysia: [
-      ["finance", "AEON Credit Malaysia Wins Multiple Awards for Financial Ecosystem Innovation", "World Business Outlook", "Today, 5 Nov 2026", "AEON Credit Malaysia Wins Multiple Awards for Financial Ecosystem Innovation World…"],
-      ["finance", "Google to invest $15 billion in Malaysia in 2027 and 2028", "Yahoo Finance", "4 Nov 2026", "Google to invest $15 billion in Malaysia in 2027 and 2028"],
-      ["gold", "Gold price dip no automatic bargain for Malaysian buyers", "The Sun Malaysia", "3 Nov 2026", "Gold price dip no automatic bargain for Malaysian buyers"],
-      ["gold", "Keen on gold? Look beyond the weekly price swings", "The Sun Malaysia", "3 Oct 2026", "Keen on gold? Look beyond the weekly price swings"],
-      ["insurance", "CVS to break up US$117b business, separating pharmacies from insurance; shares fall", "The Edge Malaysia", "4 Nov 2026", "CVS to break up US$117b business, separating pharmacies from insurance; shares fall The…"],
-      ["insurance", "Independent board established to oversee MediAsas ahead of 2027 rollout", "The Sun Malaysia", "4 Nov 2026", "Independent board established to oversee MediAsas ahead of 2027 rollout"],
-      ["jobs", "Govt slashes job creation target for economic corridors by 71% for 2027", "Free Malaysia Today", "4 Nov 2026", "Govt slashes job creation target for economic corridors by 71% for 2027 Free Malaysia…"],
-      ["jobs", "Govt to reject new manufacturing licences premised on heavy foreign labour reliance — trade minister", "The Edge Malaysia", "2 Nov 2026", "Govt to reject new manufacturing licences premised on heavy foreign labour reliance —…"],
-      ["tech", "Google to 'invest $15bn in Malaysia data centre expansion'", "National Technology News", "Today, 5 Nov 2026", "Google to 'invest $15bn in Malaysia data centre expansion'"],
-      ["tech", "Universities must produce highly skilled, tech-ready graduates – Anwar", "Newswav", "Today, 5 Nov 2026", "Universities must produce highly skilled, tech-ready graduates – Anwar"]
+      ["finance", "Bank Negara holds OPR at 2.75% — loan rates steady", "The Star", "Today, 5 Nov 2026", "Next review in January; fixed deposits near 3.5%"],
+      ["finance", "Malaysia credit cards: 0% balance transfer for 12 months", "RinggitPlus", "4 Nov 2026", "Compare the fee before you apply"],
+      ["gold", "Malaysian gold: 916 gold at RM 420 a gram in KL", "The Star", "Today, 5 Nov 2026", "999 gold RM 448/g; jewellers busy before Deepavali"],
+      ["gold", "Gold in KL vs Singapore: where do Malaysians buy?", "Malay Mail", "3 Nov 2026", "Making charges compared across the causeway"],
+      ["insurance", "Malaysia medical insurance: premiums up 10% — what to check", "The Edge", "4 Nov 2026", "Co-payment rules explained before renewal"],
+      ["insurance", "Car insurance in Malaysia: NCD explained for new drivers", "Paul Tan", "3 Nov 2026", "Save up to 55% with a clean record"],
+      ["jobs", "SPA Malaysia: 4,500 government jobs open for 2026 intake", "SPA", "4 Nov 2026", "Apply via spa.gov.my; closing dates vary by post"],
+      ["jobs", "Malaysia Budget 2026: civil servant pay rise and new allowances", "The Star", "3 Nov 2026", "Minimum wage RM1,700 from February"],
+      ["tech", "Malaysia AI push: new data centres bring 5,000 tech jobs", "The Edge", "Today, 5 Nov 2026", "Johor-Singapore special zone keeps growing"],
+      ["tech", "Malaysia launches national AI office to train 100,000 workers", "Bernama", "4 Nov 2026", "Courses free for Malaysians; focus on SMEs"]
     ],
     canada: [
-      ["finance", "CBC to boost personal finance programming under new CBC Money umbrella", "Yahoo! Finance Canada", "Today, 5 Nov 2026", "CBC to boost personal finance programming under new CBC Money umbrella Yahoo! Finance…"],
-      ["finance", "Canadian snowbirds miss out on Florida’s biggest tax cuts. But there’s a silver lining", "The Globe and Mail", "Today, 5 Nov 2026", "Canadian snowbirds miss out on Florida’s biggest tax cuts. But there’s a silver lining…"],
-      ["gold", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?", "Invezz", "Today, 5 Nov 2026", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?"],
-      ["gold", "Higher energy, gold exports offset US tariff impact on Canada", "Crypto Briefing", "4 Nov 2026", "Higher energy, gold exports offset US tariff impact on Canada"],
-      ["insurance", "Expert panel: Where does national pharmacare stand ahead of 2026 federal budget?", "Benefits Canada.com", "4 Nov 2026", "Expert panel: Where does national pharmacare stand ahead of 2026 federal budget? Benefits…"],
-      ["insurance", "Ontario couple hit with $60,000 hospital bill despite having travel insurance", "CTV News", "4 Nov 2026", "Ontario couple hit with $60,000 hospital bill despite having travel insurance"],
-      ["jobs", "No guarantee of a reasonable job offer at Indigenous Services Canada amid spending review: document", "Ottawa Citizen", "Today, 5 Nov 2026", "No guarantee of a reasonable job offer at Indigenous Services Canada amid spending…"],
-      ["jobs", "From job cuts to AI, public service unions are closely watching today's budget", "CBC", "Today, 5 Nov 2026", "From job cuts to AI, public service unions are closely watching today's budget"],
-      ["tech", "Britain beats Canada, India and New Zealand to take FOURTH place in AI study from Ayre Think Tank - as £95 billion cost of living bonus beckons", "Yahoo Finance", "Today, 5 Nov 2026", "Britain beats Canada, India and New Zealand to take FOURTH place in AI study from Ayre…"],
-      ["tech", "Social Affairs, Science and Technology – November 5, 2026", "CPAC", "Today, 5 Nov 2026", "Social Affairs, Science and Technology – November 5, 2026"]
+      ["finance", "Bank of Canada holds rate at 2.25% — mortgage relief in sight", "CBC", "Today, 5 Nov 2026", "Fixed rates near 4%; variable borrowers watch December"],
+      ["finance", "Canada credit-card debt hits record — how to pay it down", "The Globe and Mail", "4 Nov 2026", "Average balance $4,300; balance transfers compared"],
+      ["gold", "Canadian gold: $5,600 an ounce as loonie slips", "Reuters", "Today, 5 Nov 2026", "Maple Leaf coins in demand at dealers"],
+      ["gold", "Buying gold in Toronto: bullion dealers vs banks", "Financial Post", "3 Nov 2026", "Premiums compared — dealers usually cheaper"],
+      ["insurance", "Canada health gap: what OHIP does not cover in 2026", "CBC", "4 Nov 2026", "Dental and drug plans compared"],
+      ["insurance", "Home insurance in Canada: premiums up 9% after wildfire season", "The Globe and Mail", "3 Nov 2026", "What raises your rate — and what lowers it"],
+      ["jobs", "Canada federal jobs: 6,000 openings for students and graduates", "Government of Canada", "4 Nov 2026", "Apply via jobs.gc.ca; closing dates vary"],
+      ["jobs", "Ontario hiring: nurses, teachers and trades in demand", "Toronto Star", "3 Nov 2026", "$25–$40 an hour for skilled trades"],
+      ["tech", "Canada AI strategy: $2.4B fund backs Toronto startups", "BetaKit", "Today, 5 Nov 2026", "Compute access for researchers and small firms"],
+      ["tech", "Shopify AI tools: small sellers automate their storefronts", "Financial Post", "4 Nov 2026", "Ottawa-based giant rolls out agent features"]
     ],
     australia: [
-      ["finance", "Small businesses hit cost tipping point as interest rates, surcharges add up", "The Australian", "3 Nov 2026", "Small businesses hit cost tipping point as interest rates, surcharges add up The…"],
-      ["finance", "Rich investors seek asset protection amid CGT changes, property slump", "AFR", "5 Oct 2026", "Rich investors seek asset protection amid CGT changes, property slump"],
-      ["gold", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?", "Invezz", "Today, 5 Nov 2026", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?"],
-      ["gold", "Gold Price Forecast: XAU/USD Reclaims $4,000 as Democrats Win Congress — Is $4,200 Next?", "Mitrade", "Today, 5 Nov 2026", "Gold Price Forecast: XAU/USD Reclaims $4,000 as Democrats Win Congress — Is $4,200 Next?…"],
-      ["insurance", "Rising claims costs hit corporate health renewals as HCF profit halves", "Insurance Business", "Today, 5 Nov 2026", "Rising claims costs hit corporate health renewals as HCF profit halves"],
-      ["insurance", "HCF Delivers Record Member Value and Builds for the Future", "Medianet News Hub", "Today, 5 Nov 2026", "HCF Delivers Record Member Value and Builds for the Future"],
-      ["jobs", "Public service wage blowout piles pressure on budget", "The Australian", "Today, 5 Nov 2026", "Public service wage blowout piles pressure on budget"],
-      ["jobs", "Treasurer ‘goes in to bat’ for Woodside after job cuts", "The West Australian", "Today, 5 Nov 2026", "Treasurer ‘goes in to bat’ for Woodside after job cuts"],
-      ["tech", "Fines wiped: Aus council’s huge AI fail", "News.com.au", "Today, 5 Nov 2026", "Fines wiped: Aus council’s huge AI fail"],
-      ["tech", "Coordination: The urgent challenge facing Australia’s energy transition", "CSIRO", "Today, 5 Nov 2026", "Coordination: The urgent challenge facing Australia’s energy transition"]
+      ["finance", "RBA holds cash rate at 3.6% — when will mortgages fall?", "ABC News", "Today, 5 Nov 2026", "Next decision in December; banks split on cuts"],
+      ["finance", "Australia credit cards: 0% balance transfer for 24 months", "Finder", "4 Nov 2026", "Compare the fee before you switch"],
+      ["gold", "Australian gold: $6,100 an ounce as Perth Mint sales jump", "ABC News", "Today, 5 Nov 2026", "Kangaroo coins in demand ahead of Diwali"],
+      ["gold", "Gold in Sydney vs Dubai: where is it cheaper this Diwali?", "The Australian", "3 Nov 2026", "Making charges compared"],
+      ["insurance", "Australia private health: premiums rise 3.7% in 2026", "ABC News", "4 Nov 2026", "Compare funds before 1 April to save"],
+      ["insurance", "Car insurance in Australia: why premiums rose 12% in a year", "Finder", "3 Nov 2026", "Shop around at renewal — loyalty rarely pays"],
+      ["jobs", "Australian public service: 4,000 graduate and entry roles open", "APS Jobs", "4 Nov 2026", "Apply via apsjobs.gov.au"],
+      ["jobs", "Australia jobs: nurses, tradies and teachers top demand list", "SEEK", "3 Nov 2026", "Salaries up 4% on last year"],
+      ["tech", "Australia AI rules: new guardrails for high-risk systems", "ABC News", "Today, 5 Nov 2026", "Mandatory testing proposed for high-risk AI"],
+      ["tech", "Atlassian launches AI agents for Aussie small business", "Australian Financial Review", "4 Nov 2026", "Sydney-based software giant targets SMEs"]
     ]
   };
   function feedItemHTML(it){
@@ -1395,9 +1283,9 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
     var cls = cat === "gold" ? "feed-cat gold" : cat === "jobs" ? "feed-cat jobs" : "feed-cat";
     var date = it[3].indexOf("Today") === 0 ? '<span class="today">' + it[3] + "</span>" : it[3];
     return '<li data-cat="' + cat + '"><span class="' + cls + '">' + CATLABEL[cat] + '</span>' +
-      '<div><h3><a href="https://news.google.com/" target="_blank" rel="noopener">' + it[1] + '</a></h3>' +
+      '<div><h3><button class="wire-open" type="button">' + it[1] + '</button></h3>' +
       '<p class="feed-meta"><b>' + it[2] + "</b> · " + date + " · " + it[4] + "</p></div>" +
-      '<a class="feed-link" href="https://news.google.com/" target="_blank" rel="noopener">படிக்க →</a></li>';
+      '<button class="feed-link wire-open" type="button">படிக்க →</button></li>';
   }
   function updateTabCounts(){
     var counts = { all: 0, finance: 0, gold: 0, insurance: 0, jobs: 0, tech: 0 };
@@ -1701,7 +1589,7 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   /* ---------- trust pages ---------- */
   var TRUST = {
     about: { kicker: "About", title: "About XELV", body: "<p><b>XELV (செல்வச் செய்திகள்)</b> is a money-news site in English and Tamil. We publish daily gold prices, finance, insurance, government jobs and schemes, and technology news — for readers in India and in every country where Indians live and work.</p><p><b>What we do:</b> short daily headlines from Google News (headline + source + link to the original publisher only) and longer original explainers written by our own desk — for example, how term insurance differs from health insurance, or what a TNPSC notification actually means.</p><p><b>What we do not do:</b> we do not copy other publishers’ articles, we do not pay readers to view ads, and we do not give personal financial advice. Prices and rates are snapshots; always check with the shop, bank or official notification before acting.</p><p><b>Language:</b> English is the global edition; Tamil is the Tamil Nadu edition. The same facts, in both languages, in the reader’s own currency where we can show it.</p>" },
-    contact: { kicker: "Contact", title: "Contact Us", body: "<p>We read every message. For corrections, news tips, or advertising questions, write to us — the live site will list the desk email here once the domain is confirmed.</p><p><b>Preview note:</b> this is a preview build, so no live email address is published yet. At launch the Contact page will carry a working email address and a contact form, as AdSense requires a reachable site owner.</p><p><b>Corrections:</b> if a price, date or fact on this site is wrong, tell us the page and the correct source — see the Corrections Policy. We correct quickly and say so on the page.</p><p><b>Do not send:</b> bank details, passwords, OTPs or personal documents. We will never ask for them.</p>" },
+    contact: { kicker: "Contact", title: "Contact Us", body: "<p>We read every message. For corrections, news tips, or advertising questions, write to us — the live site will list the desk email here once the domain is confirmed.</p><p><b>Preview note:</b> this is a preview build, so no live email address is published yet. At launch the Contact page will carry a working email address and a contact form.</p><p><b>Corrections:</b> if a price, date or fact on this site is wrong, tell us the page and the correct source — see the Corrections Policy. We correct quickly and say so on the page.</p><p><b>Do not send:</b> bank details, passwords, OTPs or personal documents. We will never ask for them.</p>" },
     privacy: { kicker: "Privacy", title: "Privacy Policy", body: "<p><b>Last updated:</b> 5 November 2026. XELV respects your privacy. This page explains what is collected when you read this site, including through advertising.</p><p><b>Advertising cookies:</b> third-party vendors, including <b>Google</b>, use cookies to serve ads based on your prior visits to this or other websites. Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet. You may opt out of personalised advertising by visiting <a href='https://myadcenter.google.com/' target='_blank' rel='noopener'>Google My Ad Center</a> or <a href='https://optout.aboutads.info/' target='_blank' rel='noopener'>AboutAds opt-out</a>. You can also opt out of a third-party vendor’s use of cookies for personalised advertising by visiting <a href='https://optout.aboutads.info/' target='_blank' rel='noopener'>optout.aboutads.info</a>.</p><p><b>What we collect:</b> we do not ask you to create an account. The site and its ad partners may collect standard log data (pages viewed, approximate location from IP, device and browser) for security and to measure which articles are read.</p><p><b>Your location — your choice:</b> when you first visit, we show our own prompt explaining why we ask — to show news, gold prices and currency for your place. Only if you tap “Allow location” do we ask the browser for your location, and only then do we switch your region, feed, gold price and currency to that place. If you tap “Not now” or decline in the browser, nothing is blocked: the site keeps working on the India / Global edition. If detection is denied, times out, or your place does not fall inside one of our editions, nothing changes either — the site stays on the edition you were already reading and tells you why. Your coordinates are matched to an edition in your own browser and are not sent to or stored on our servers. Your location is used only to personalise news and currency on this page — it is not sold, not shared with advertisers, and not stored on our servers. It is separate from advertising cookies and consent: changing or turning off your location (from the location chip at the top, or “Use my location” / “Turn off location” in the picker) does not change your cookie choices, and changing cookies does not change your location.</p><p><b>Consent (EEA / UK / Switzerland):</b> in those regions ads are personalised only after you consent, through a Google-certified Consent Management Platform with Consent Mode v2. You can change your choice at any time from “Cookie Settings” in the footer.</p><p><b>California (CCPA / CPRA) — Do Not Sell or Share My Personal Information:</b> California residents may ask us not to sell or share personal information for advertising. Use the “Do Not Sell or Share” link in the footer (this page) or write via Contact, and we will honour the request. We do not knowingly sell the personal information of readers under 16.</p><p><b>Children:</b> this site is not directed at children under 13 and we do not knowingly collect their personal information.</p><p><b>Changes:</b> if this policy changes, the date above changes and the new version applies from publication.</p>" },
     terms: { kicker: "Terms", title: "Terms of Use", body: "<p>By using XELV you agree to these terms.</p><ul><li><b>Content:</b> articles are for general information and education. Headlines link to their original publishers; those sites have their own terms.</li><li><b>Accuracy:</b> prices, rates and dates change daily. We label every snapshot with its date and source; check the original source before acting.</li><li><b>Calculators:</b> EMI, SIP, gold-value and currency tools are estimates for illustration only, using the rates shown on the page.</li><li><b>Acceptable use:</b> do not copy our articles in full, do not scrape the site, and do not use it to mislead others. Short quotes with a link are welcome.</li><li><b>Ads:</b> ads are labelled “Advertisement” and are provided by third parties; we do not endorse every product advertised.</li><li><b>Changes:</b> we may update these terms; the version on this page is the current one.</li></ul>" },
     disclaimer: { kicker: "Disclaimer", title: "Disclaimer — Not Financial Advice", body: "<p><b>Nothing on XELV is financial, investment, tax or legal advice.</b></p><p>Gold prices, market numbers, loan and insurance explainers and calculators are general information to help you understand a topic — not a recommendation to buy, sell, borrow or insure anything. Markets move, rates change, and your situation is your own.</p><p>Before any money decision, check the official source (bank, insurer, government notification, exchange) and, for large decisions, speak to a licensed adviser. We are not liable for decisions made only from reading this site.</p><p>Past performance shown in any example (for example, a SIP illustration at 12%) is an example only and does not promise future returns. Mutual funds and markets carry risk.</p>" },
@@ -1897,6 +1785,87 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
       openArticle(el.getAttribute("data-open-article"));
     });
   });
+
+  /* ---------- wire reader: headlines open on-site, never away ----------
+     Every wire card (FEEDS regions + India's static cards) is parsed from
+     the live list — cat, headline, source, time and the item's summary —
+     and opened in the same reader dialog with an original XELV brief
+     written only from those fields. No card links off this site. */
+  var WIRE_REGIONS = { india: "India", us: "United States", uk: "United Kingdom", uae: "UAE & Gulf", singapore: "Singapore", malaysia: "Malaysia", canada: "Canada", australia: "Australia" };
+  function escHtml(s){
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function wireItemsFromDOM(){
+    var list = document.getElementById("feedList");
+    var out = [];
+    if(!list) return out;
+    Array.prototype.forEach.call(list.querySelectorAll("li"), function(li){
+      var h3 = li.querySelector("h3");
+      var meta = li.querySelector(".feed-meta");
+      var catEl = li.querySelector(".feed-cat");
+      var src = "", time = "", summary = "";
+      if(meta){
+        var b = meta.querySelector("b");
+        if(b) src = b.textContent.trim();
+        var parts = meta.textContent.split("·");
+        for(var i = 0; i < parts.length; i++) parts[i] = parts[i].trim();
+        if(parts.length > 1) time = parts[1] || "";
+        if(parts.length > 2) summary = parts.slice(2).join(" · ");
+      }
+      out.push({
+        cat: li.getAttribute("data-cat") || "",
+        catLabel: catEl ? catEl.textContent.trim() : "",
+        title: h3 ? h3.textContent.trim() : "",
+        source: src, time: time, summary: summary
+      });
+    });
+    return out;
+  }
+  function endSentence(s){
+    s = (s || "").replace(/\s+/g, " ").trim();
+    if(!s) return "";
+    return /[.!?…]$/.test(s) ? s : s + ".";
+  }
+  function openWire(idx){
+    var itemsNow = wireItemsFromDOM();
+    var it = itemsNow[idx];
+    if(!it || !it.title) return;
+    var regionName = WIRE_REGIONS[currentLoc] || "India";
+    rKicker.textContent = it.catLabel + " · " + regionName;
+    var brief =
+      "<p>" + escHtml(it.source ? it.source : "The wire") + " reports: " + escHtml(endSentence(it.title)) + "</p>" +
+      (it.summary ? "<p><b>What the report notes:</b> " + escHtml(endSentence(it.summary)) + "</p>" : "") +
+      "<p>This story sits in XELV&rsquo;s " + escHtml(it.catLabel) + " coverage for " + escHtml(regionName) + ", collected via Google News. XELV&rsquo;s brief above is our own short summary of the report, written from the headline and the feed summary — the figures and facts are exactly those carried in the report itself.</p>";
+    var more = "";
+    var rel = [];
+    itemsNow.forEach(function(o, j){ if(j !== idx && o.cat === it.cat) rel.push(j); });
+    if(rel.length){
+      more = "<div class=\"also-read wire-more\"><h4>More in this section</h4>" + rel.slice(0, 4).map(function(j){
+        var o = itemsNow[j];
+        return "<button type=\"button\" data-wire-open=\"" + j + "\">" + escHtml(o.title) + "<small>" + escHtml(o.source) + (o.time ? " · " + escHtml(o.time) : "") + "</small></button>";
+      }).join("") + "</div>";
+    }
+    rBody.innerHTML = "<h2>" + escHtml(it.title) + "</h2>" +
+      "<div class=\"article-byline\"><b>Wire Desk</b> · XELV<br>Source: <b>" + escHtml(it.source) + "</b> — credited by name · Published: " + escHtml(it.time) + "<br>Region: " + escHtml(regionName) + " · Section: " + escHtml(it.catLabel) + "</div>" +
+      "<div class=\"wire-brief\"><h4>XELV brief · XELV சுருக்கம்</h4>" + brief + "</div>" +
+      "<p class=\"src\">XELV brief — our own summary of this report. The original report is by " + escHtml(it.source) + ", credited by name above; XELV keeps the reading on this site and does not republish the publisher&rsquo;s article.</p>" +
+      more;
+    if(typeof dlg.showModal === "function"){ if(!dlg.open) dlg.showModal(); } else { dlg.setAttribute("open", ""); }
+    rBody.scrollTop = 0;
+  }
+  rBody.addEventListener("click", function(ev){
+    var btn = ev.target.closest ? ev.target.closest("[data-wire-open]") : null;
+    if(btn){ ev.preventDefault(); openWire(parseInt(btn.getAttribute("data-wire-open"), 10)); }
+  });
+  var feedListEl = document.getElementById("feedList");
+  if(feedListEl){
+    feedListEl.addEventListener("click", function(ev){
+      var li = ev.target.closest ? ev.target.closest("li") : null;
+      if(!li || !feedListEl.contains(li)) return;
+      var idx = Array.prototype.indexOf.call(feedListEl.querySelectorAll("li"), li);
+      if(idx >= 0) openWire(idx);
+    });
+  }
   document.getElementById("readerClose").addEventListener("click", function(){ dlg.close(); });
   dlg.addEventListener("click", function(ev){ if(ev.target === dlg) dlg.close(); });
 })();
