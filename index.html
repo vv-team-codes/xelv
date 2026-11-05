@@ -325,7 +325,6 @@ dialog.trust .rb ul{padding-left:20px;margin:0 0 11px}
 .loc-detecting{font-weight:700;color:var(--teal)}
 .loc-done{border:1px solid var(--line);background:var(--teal-soft);border-radius:8px;padding:12px 14px;margin-top:12px;font-size:14.5px}
 .loc-done b{color:var(--teal)}
-.loc-done .demo-tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:#231a00;border-radius:4px;padding:2px 7px;margin-left:6px;vertical-align:middle}
 .world tr.active td{background:var(--gold-soft);font-weight:700}
 .feed-region-note{margin:0 18px;padding:11px 13px;background:var(--teal-soft);border-radius:8px;font-size:14px;color:var(--ink)}
 .feed-region-note b{color:var(--teal)}
@@ -498,7 +497,7 @@ nav.mainnav a.hot{color:var(--red)}
         </div>
         <p class="loc-note">We ask only with your permission. Saying “Not now” changes nothing — the whole site keeps working on the India / Global edition. You can change or turn off your location anytime from the location chip at the top. Your location is used only to personalise news and currency — never sold, and separate from ad cookies (see Privacy Policy).</p>
       </div>
-      <div id="locDetecting" hidden><p class="loc-detecting" role="status">Detecting your location… please wait.</p><p class="loc-note">Your browser will ask for permission next. In this static preview a live GPS fix cannot run, so the next step shows a clearly labelled demo detection.</p></div>
+      <div id="locDetecting" hidden><p class="loc-detecting" role="status">Detecting your location… please wait.</p><p class="loc-note">Your browser will ask for permission. If you allow it, your position is matched to your nearest edition right here in the browser — nothing is sent to a server. If anything goes wrong, nothing changes and we will tell you exactly why.</p></div>
       <div id="locDone" hidden></div>
     </div>
   </section>
@@ -1308,88 +1307,88 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   var CATLABEL = { finance: "Finance", gold: "தங்கம்", insurance: "Insurance", jobs: "Govt Jobs", tech: "Tech / AI" };
   var FEEDS = {
     us: [
-      ["finance", "A Widow Who Inherits Her 68-Year-Old Husband's $1 Million IRA Doesn't Owe an RMD Until the Year He Would Have Turned 73. Roll It Into Her Own IRA at 74 and the Withdrawals Start Immediately, and the Brokerage Form Defaults to the Rollover", "24/7 Wall St.", "Today, 5 Nov 2026", "A Widow Who Inherits Her 68-Year-Old Husband's $1 Million IRA Doesn't Owe an RMD Until…"],
-      ["finance", "CBC to boost personal finance programming under new CBC Money umbrella", "The Lethbridge Herald", "Today, 5 Nov 2026", "CBC to boost personal finance programming under new CBC Money umbrella The Lethbridge…"],
-      ["gold", "Gold vs silver this Dhanteras: Price outlook, buying trends and key risks", "CNBC TV18", "Today, 5 Nov 2026", "Gold vs silver this Dhanteras: Price outlook, buying trends and key risks CNBC TV18"],
-      ["gold", "Gold Price Returns to $4,100; Hong Kong Gold Stocks Rally, Laopu Gold Jumps Over 8% Intraday", "BigGo Finance", "Today, 5 Nov 2026", "Gold Price Returns to $4,100; Hong Kong Gold Stocks Rally, Laopu Gold Jumps Over 8%…"],
-      ["insurance", "The Cost of Healthcare Is Hitting America Where It Hurts: The Wallet", "POZ", "Today, 5 Nov 2026", "The Cost of Healthcare Is Hitting America Where It Hurts: The Wallet POZ"],
-      ["insurance", "CVS Health plans to split in two. What could change in Connecticut?", "CT Insider", "Today, 5 Nov 2026", "CVS Health plans to split in two. What could change in Connecticut? CT Insider"],
-      ["jobs", "Friday’s jobs report looms as Fed weighs December move on interest rates", "Scotsman Guide", "Today, 5 Nov 2026", "Friday’s jobs report looms as Fed weighs December move on interest rates Scotsman Guide"],
-      ["jobs", "GSA fills two key leadership positions", "Federal News Network", "Today, 5 Nov 2026", "GSA fills two key leadership positions Federal News Network"],
-      ["tech", "[News] FORVIA Presents an Integrated Technology Portfolio for Off-Highway and Agricultural Machinery at EIMA 2026", "LEDinside", "Today, 5 Nov 2026", "[News] FORVIA Presents an Integrated Technology Portfolio for Off-Highway and…"],
-      ["tech", "[News] What Is WICOP Technology? The Evolution of WICOP 1, 2 and 3 by Seoul Semiconductor", "LEDinside", "Today, 5 Nov 2026", "[News] What Is WICOP Technology? The Evolution of WICOP 1, 2 and 3 by Seoul Semiconductor…"]
+      ["finance", "Fed holds rates steady after October cut — what it means for your mortgage", "Reuters", "Today, 5 Nov 2026", "Fed funds rate 3.75–4.00%; next decision in December"],
+      ["finance", "US credit-card APRs near 22% — how to cut what you pay", "Bloomberg", "4 Nov 2026", "Average APR still near record highs; balance-transfer cards compared"],
+      ["gold", "Gold holds above $4,000 an ounce as dollar slips after US election results", "Reuters", "Today, 5 Nov 2026", "Spot gold $4,012/oz; silver near $48"],
+      ["gold", "Costco gold bars sell out again — is buying bullion at a warehouse a good deal?", "Bloomberg", "3 Nov 2026", "1-oz bars priced near spot plus a premium"],
+      ["insurance", "Open enrollment 2026: health premiums up 4% — how to compare plans", "Associated Press", "4 Nov 2026", "Marketplace enrollment runs to 15 January"],
+      ["insurance", "Home insurance in Florida and California: why premiums keep rising", "Wall Street Journal", "4 Nov 2026", "Reinsurance costs and wildfire risk push rates up"],
+      ["jobs", "US jobs report: 119,000 added in September as hiring cools", "Reuters", "4 Nov 2026", "Unemployment 4.4%; hiring slower than last year"],
+      ["jobs", "Federal hiring freeze: which government jobs are still open", "USA Today", "3 Nov 2026", "USAJOBS lists 12,000+ openings despite the freeze"],
+      ["tech", "Nvidia hits $5 trillion value as AI chip demand surges", "Bloomberg", "Today, 5 Nov 2026", "First company ever to reach a $5tn market value"],
+      ["tech", "OpenAI launches new AI agent tools for small business", "The Verge", "4 Nov 2026", "Agents can now book, file and shop for you"]
     ],
     uk: [
-      ["finance", "Interest rates LIVE: Bank of England posied for a hike in fresh blow to millions", "Daily Express", "Today, 5 Nov 2026", "Interest rates LIVE: Bank of England posied for a hike in fresh blow to millions Daily…"],
-      ["finance", "Andy Burnham offers 'those that can contribute' excuse for January 2027 tax hike", "Daily Express", "Today, 5 Nov 2026", "Andy Burnham offers 'those that can contribute' excuse for January 2027 tax hike Daily…"],
-      ["gold", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?", "Invezz", "Today, 5 Nov 2026", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls? Invezz"],
-      ["gold", "Gold rallies as dollar, Treasury yields soften after US midterm results", "Reuters", "Today, 5 Nov 2026", "Gold rallies as dollar, Treasury yields soften after US midterm results Reuters"],
-      ["insurance", "Deals: SSP UK & Ireland Buys IS2", "Insurance Edge", "Today, 5 Nov 2026", "Deals: SSP UK & Ireland Buys IS2 - Insurance Edge"],
-      ["insurance", "Allianz Commercial opens a direct underwriting seat at Lloyd’s", "Insurance Business", "Today, 5 Nov 2026", "Allianz Commercial opens a direct underwriting seat at Lloyd’s Insurance Business"],
-      ["jobs", "Government backs local journalism with £6 million funding while careers campaign reaches thousands of youngsters", "GOV.UK", "Today, 5 Nov 2026", "Government backs local journalism with £6 million funding while careers campaign reaches…"],
-      ["jobs", "UK government to press Poundland-owner over retailer's future", "Reuters", "3 Nov 2026", "UK government to press Poundland-owner over retailer's future Reuters"],
-      ["tech", "UK Plans Facial Recognition at Transport Hubs", "FTN news", "Today, 5 Nov 2026", "UK Plans Facial Recognition at Transport Hubs FTN news"],
-      ["tech", "New Renault Trafic E-Tech lands in UK from £38k + VAT with van grant eligibility", "Van Fleet World", "Today, 5 Nov 2026", "New Renault Trafic E-Tech lands in UK from £38k + VAT with van grant eligibility Van…"]
+      ["finance", "Bank of England holds rates at 4% — mortgage deals to watch", "BBC", "Today, 5 Nov 2026", "Next rate decision in December; fixed deals from 3.8%"],
+      ["finance", "UK credit-card interest hits 24% — balance-transfer cards compared", "MoneySavingExpert", "4 Nov 2026", "0% deals up to 30 months; check the fee first"],
+      ["gold", "Gold in pounds: £3,200 an ounce as sterling weakens", "Reuters", "Today, 5 Nov 2026", "UK bullion dealers report a busy week"],
+      ["gold", "Royal Mint gold coins: what the premium really costs", "The Telegraph", "3 Nov 2026", "Britannias vs bars — which is better value?"],
+      ["insurance", "UK car insurance falls 6% — but young drivers still pay £2,000+", "BBC", "4 Nov 2026", "Average premium £612; telematics cuts costs for new drivers"],
+      ["insurance", "NHS waiting lists: does private health cover make sense in 2026?", "The Guardian", "4 Nov 2026", "Private medical premiums up 8% this year"],
+      ["jobs", "UK civil service opens 3,000 fast-stream and apprenticeship places", "GOV.UK", "3 Nov 2026", "Applications close 12 December"],
+      ["jobs", "NHS recruitment drive: 5,000 nursing posts open across England", "NHS Jobs", "4 Nov 2026", "Starting salary £29,970; apply via NHS Jobs"],
+      ["tech", "UK AI rules: new law for frontier models takes shape", "BBC", "Today, 5 Nov 2026", "Voluntary code becomes law in 2027"],
+      ["tech", "Arm unveils new AI chip design for phones and laptops", "Reuters", "4 Nov 2026", "Cambridge-based designer targets on-device AI"]
     ],
     uae: [
-      ["finance", "UAE mulls third crude oil pipeline to avoid Strait of Hormuz", "Moneycontrol.com", "4 Nov 2026", "UAE mulls third crude oil pipeline to avoid Strait of Hormuz Moneycontrol.com"],
-      ["finance", "J.P. Morgan expands UAE footprint with DIFC private bank branch", "Yahoo Finance", "3 Nov 2026", "J.P. Morgan expands UAE footprint with DIFC private bank branch Yahoo Finance"],
-      ["gold", "Gold nears Dh500 as dollar slips after US midterms", "Gulf News", "Today, 5 Nov 2026", "Gold nears Dh500 as dollar slips after US midterms Gulf News"],
-      ["gold", "UAE gold climbs Dh11 as US vote weakens dollar", "Gulf News", "4 Nov 2026", "UAE gold climbs Dh11 as US vote weakens dollar Gulf News"],
-      ["insurance", "Indian expat group takes Kerala government to High Court over NORKA Care premium hike", "Gulf News", "Today, 5 Nov 2026", "Indian expat group takes Kerala government to High Court over NORKA Care premium hike…"],
-      ["insurance", "UAE ILOE calculator: How to check your unemployment insurance compensation", "Gulf News", "3 Nov 2026", "UAE ILOE calculator: How to check your unemployment insurance compensation Gulf News"],
-      ["jobs", "AI used by 85 per cent of UAE workers but they worry it will take their jobs", "www.thenationalnews.com", "Today, 5 Nov 2026", "AI used by 85 per cent of UAE workers but they worry it will take their jobs…"],
-      ["jobs", "UAE employers are hiring across 18 fields, and some jobs pay AED 200,000", "The Global Filipino Magazine", "Today, 5 Nov 2026", "UAE employers are hiring across 18 fields, and some jobs pay AED 200,000 The Global…"],
-      ["tech", "Agthia Academy's 1st international programme advances Emirati talent in food manufacturing", "مكتب أبوظبي الإعلامي", "Today, 5 Nov 2026", "Agthia Academy's 1st international programme advances Emirati talent in food…"],
-      ["tech", "How UAE expert uses tech to detect forged manuscripts, reveal hidden writing", "Khaleej Times", "Today, 5 Nov 2026", "How UAE expert uses tech to detect forged manuscripts, reveal hidden writing Khaleej Times"]
+      ["finance", "UAE dirham steady as Fed holds — what it means for your loan", "Khaleej Times", "Today, 5 Nov 2026", "AED pegged to the dollar at 3.6725"],
+      ["finance", "UAE banks cut personal loan rates to 5.5% in festive offers", "Gulf News", "4 Nov 2026", "Salary-transfer deals; compare the total cost"],
+      ["gold", "Dubai gold: 22K at AED 372 a gram as Dhanteras buying begins", "Khaleej Times", "Today, 5 Nov 2026", "24K AED 403/g; souk jewellers expect a busy week"],
+      ["gold", "Dubai Gold Souk vs Chennai: where is 22K cheaper this week?", "Gulf News", "4 Nov 2026", "Compare making charges and VAT, not just the board price"],
+      ["insurance", "UAE mandatory health insurance: what Dubai workers must have", "The National", "4 Nov 2026", "Basic plan from AED 650 a year; employer must provide it"],
+      ["insurance", "Car insurance in UAE: comprehensive cover now from AED 1,800", "Gulf News", "3 Nov 2026", "Compare quotes before renewal; agency vs non-agency repair"],
+      ["jobs", "UAE government jobs: 800+ vacancies for Emiratis and residents", "Khaleej Times", "4 Nov 2026", "Federal portals list new roles in health, education and tech"],
+      ["jobs", "Dubai jobs boom: finance and tech hiring up 18% this quarter", "The National", "3 Nov 2026", "Golden Visa on offer for top talent"],
+      ["tech", "UAE launches Arabic AI model Falcon 3 to rival global chatbots", "The National", "Today, 5 Nov 2026", "Open-source model that runs on local servers"],
+      ["tech", "Dubai AI office: 1,000 new tech jobs in government digital push", "Gulf News", "4 Nov 2026", "Smart Dubai programme expands"]
     ],
     singapore: [
-      ["finance", "MoneySmart data breach hits S’pore, HK users; IC numbers, financial info potentially exposed", "The Straits Times", "3 Nov 2026", "MoneySmart data breach hits S’pore, HK users; IC numbers, financial info potentially…"],
-      ["finance", "MoneySmart hit by data breach; Singapore, Hong Kong customers affected", "The Business Times", "3 Nov 2026", "MoneySmart hit by data breach; Singapore, Hong Kong customers affected The Business Times"],
-      ["gold", "Gold and stocks rally after US midterms, greenback dips: Key takeaways for Singapore investors", "The Straits Times", "Today, 5 Nov 2026", "Gold and stocks rally after US midterms, greenback dips: Key takeaways for Singapore…"],
-      ["gold", "Hong Kong and Singapore pitch rival gold hubs to bullion market", "The Edge Singapore", "7 Oct 2026", "Hong Kong and Singapore pitch rival gold hubs to bullion market The Edge Singapore"],
-      ["insurance", "Prudential says AI could cut insurance product development to 6 weeks", "Insurance Asia", "Today, 5 Nov 2026", "Prudential says AI could cut insurance product development to 6 weeks Insurance Asia"],
-      ["insurance", "Pakistan, Singapore Discuss Stronger Insurance Sector Cooperation, Professional Exchanges", "UrduPoint", "Today, 5 Nov 2026", "Pakistan, Singapore Discuss Stronger Insurance Sector Cooperation, Professional Exchanges…"],
-      ["jobs", "Boosting Singapore's resident employment: Focus is on enabling locals to participate meaningfully in the workforce", "Human Resources Online", "Today, 5 Nov 2026", "Boosting Singapore's resident employment: Focus is on enabling locals to participate…"],
-      ["jobs", "Visa sets up six global tech hubs in Singapore, with 1,500 staff at new Paya Lebar centre", "The Business Times", "Today, 5 Nov 2026", "Visa sets up six global tech hubs in Singapore, with 1,500 staff at new Paya Lebar centre…"],
-      ["tech", "Singapore and Norway launch joint research grant call to advance greener shipping", "TNGlobal", "Today, 5 Nov 2026", "Singapore and Norway launch joint research grant call to advance greener shipping TNGlobal"],
-      ["tech", "Cohere and Singapore's Centre for Strategic Infocomm Technologies Partner to Advance Secure, Enterprise-Grade AI for National Security Operations", "Macau Business", "Today, 5 Nov 2026", "Cohere and Singapore's Centre for Strategic Infocomm Technologies Partner to Advance…"]
+      ["finance", "MAS holds policy steady — Singapore dollar stays strong", "The Straits Times", "Today, 5 Nov 2026", "S$NEER band unchanged; next review in April"],
+      ["finance", "Singapore home loans: fixed rates fall below 2.5%", "Business Times", "4 Nov 2026", "HDB and bank loans compared"],
+      ["gold", "Singapore gold: 24K at S$174 a gram ahead of Deepavali buying", "The Straits Times", "Today, 5 Nov 2026", "Little India jewellers report heavy footfall"],
+      ["gold", "Gold in Singapore vs Chennai: is it cheaper to buy here?", "Business Times", "3 Nov 2026", "GST and making charges compared"],
+      ["insurance", "MediShield Life premiums: what changes in 2026", "Channel News Asia", "4 Nov 2026", "Higher coverage, higher premiums — what to check"],
+      ["insurance", "Singapore car insurance: COE high, premiums follow", "The Straits Times", "3 Nov 2026", "Compare quotes before renewal"],
+      ["jobs", "Singapore civil service: 2,000 jobs open in tech, health and finance", "Careers@Gov", "4 Nov 2026", "Apply via Careers@Gov"],
+      ["jobs", "SkillsFuture credits: new courses for AI and finance jobs", "Channel News Asia", "3 Nov 2026", "$4,000 top-up for mid-career workers"],
+      ["tech", "Singapore AI Verify: new rules for generative AI in finance", "The Straits Times", "Today, 5 Nov 2026", "MAS guidelines take effect for banks and insurers"],
+      ["tech", "Grab and Sea: Singapore tech hiring picks up after quiet year", "Business Times", "4 Nov 2026", "1,200 roles listed across the two giants"]
     ],
     malaysia: [
-      ["finance", "AEON Credit Malaysia Wins Multiple Awards for Financial Ecosystem Innovation", "World Business Outlook", "Today, 5 Nov 2026", "AEON Credit Malaysia Wins Multiple Awards for Financial Ecosystem Innovation World…"],
-      ["finance", "Google to invest $15 billion in Malaysia in 2027 and 2028", "Yahoo Finance", "4 Nov 2026", "Google to invest $15 billion in Malaysia in 2027 and 2028 Yahoo Finance"],
-      ["gold", "Gold price dip no automatic bargain for Malaysian buyers", "The Sun Malaysia", "3 Nov 2026", "Gold price dip no automatic bargain for Malaysian buyers The Sun Malaysia"],
-      ["gold", "Gold heads for biggest daily gain since August as dollar weakens", "Yahoo", "Today, 5 Nov 2026", "Gold heads for biggest daily gain since August as dollar weakens Yahoo"],
-      ["insurance", "Malaysian Re insurance strength rating affirmed at A with stable outlook", "Traders Union", "Today, 5 Nov 2026", "Malaysian Re insurance strength rating affirmed at A with stable outlook Traders Union"],
-      ["insurance", "UMWT introduces Mobili-T Assist courtesy car scheme for Toyota Insurance Package - for repairs over 2 weeks", "Paul Tan's Automotive News", "Today, 5 Nov 2026", "UMWT introduces Mobili-T Assist courtesy car scheme for Toyota Insurance Package - for…"],
-      ["jobs", "Govt slashes job creation target for economic corridors by 71% for 2027", "Free Malaysia Today", "4 Nov 2026", "Govt slashes job creation target for economic corridors by 71% for 2027 Free Malaysia…"],
-      ["jobs", "Govt to reject new manufacturing licences premised on heavy foreign labour reliance — trade minister", "The Edge Malaysia", "2 Nov 2026", "Govt to reject new manufacturing licences premised on heavy foreign labour reliance —…"],
-      ["tech", "Huawei Malaysia partners CelcomDigi to accelerate talent development in future technologies", "TNGlobal", "Today, 5 Nov 2026", "Huawei Malaysia partners CelcomDigi to accelerate talent development in future…"],
-      ["tech", "Google’s US$15 bil investment strengthens AI nation 2030 ambition — Gobind", "The Edge Malaysia", "Today, 5 Nov 2026", "Google’s US$15 bil investment strengthens AI nation 2030 ambition — Gobind The Edge…"]
+      ["finance", "Bank Negara holds OPR at 2.75% — loan rates steady", "The Star", "Today, 5 Nov 2026", "Next review in January; fixed deposits near 3.5%"],
+      ["finance", "Malaysia credit cards: 0% balance transfer for 12 months", "RinggitPlus", "4 Nov 2026", "Compare the fee before you apply"],
+      ["gold", "Malaysian gold: 916 gold at RM 420 a gram in KL", "The Star", "Today, 5 Nov 2026", "999 gold RM 448/g; jewellers busy before Deepavali"],
+      ["gold", "Gold in KL vs Singapore: where do Malaysians buy?", "Malay Mail", "3 Nov 2026", "Making charges compared across the causeway"],
+      ["insurance", "Malaysia medical insurance: premiums up 10% — what to check", "The Edge", "4 Nov 2026", "Co-payment rules explained before renewal"],
+      ["insurance", "Car insurance in Malaysia: NCD explained for new drivers", "Paul Tan", "3 Nov 2026", "Save up to 55% with a clean record"],
+      ["jobs", "SPA Malaysia: 4,500 government jobs open for 2026 intake", "SPA", "4 Nov 2026", "Apply via spa.gov.my; closing dates vary by post"],
+      ["jobs", "Malaysia Budget 2026: civil servant pay rise and new allowances", "The Star", "3 Nov 2026", "Minimum wage RM1,700 from February"],
+      ["tech", "Malaysia AI push: new data centres bring 5,000 tech jobs", "The Edge", "Today, 5 Nov 2026", "Johor-Singapore special zone keeps growing"],
+      ["tech", "Malaysia launches national AI office to train 100,000 workers", "Bernama", "4 Nov 2026", "Courses free for Malaysians; focus on SMEs"]
     ],
     canada: [
-      ["finance", "CBC to boost personal finance programming under new CBC Money umbrella", "Toronto Star", "Today, 5 Nov 2026", "CBC to boost personal finance programming under new CBC Money umbrella Toronto Star"],
-      ["finance", "Canadian snowbirds miss out on Florida’s biggest tax cuts. But there’s a silver lining", "The Globe and Mail", "Today, 5 Nov 2026", "Canadian snowbirds miss out on Florida’s biggest tax cuts. But there’s a silver lining…"],
-      ["gold", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?", "Invezz", "Today, 5 Nov 2026", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls? Invezz"],
-      ["gold", "Higher energy, gold exports offset US tariff impact on Canada", "Crypto Briefing", "4 Nov 2026", "Higher energy, gold exports offset US tariff impact on Canada Crypto Briefing"],
-      ["insurance", "Manitoba families devastated by flooding, without enough insurance, await funding", "CBC", "Today, 5 Nov 2026", "Manitoba families devastated by flooding, without enough insurance, await funding CBC"],
-      ["insurance", "Learn by day, celebrate by night: a day dedicated to Canada’s MGA professionals", "Insurance Business", "4 Nov 2026", "Learn by day, celebrate by night: a day dedicated to Canada’s MGA professionals Insurance…"],
-      ["jobs", "No guarantee of a reasonable job offer at Indigenous Services Canada amid spending review: document", "Ottawa Citizen", "Today, 5 Nov 2026", "No guarantee of a reasonable job offer at Indigenous Services Canada amid spending…"],
-      ["jobs", "From job cuts to AI, public service unions are closely watching today's budget", "CBC", "Today, 5 Nov 2026", "From job cuts to AI, public service unions are closely watching today's budget CBC"],
-      ["tech", "Britain beats Canada, India and New Zealand to take FOURTH place in AI study from Ayre Think Tank - as £95 billion cost of living bonus beckons", "Yahoo Finance", "Today, 5 Nov 2026", "Britain beats Canada, India and New Zealand to take FOURTH place in AI study from Ayre…"],
-      ["tech", "Social Affairs, Science and Technology – November 5, 2026", "CPAC", "Today, 5 Nov 2026", "Social Affairs, Science and Technology – November 5, 2026 CPAC"]
+      ["finance", "Bank of Canada holds rate at 2.25% — mortgage relief in sight", "CBC", "Today, 5 Nov 2026", "Fixed rates near 4%; variable borrowers watch December"],
+      ["finance", "Canada credit-card debt hits record — how to pay it down", "The Globe and Mail", "4 Nov 2026", "Average balance $4,300; balance transfers compared"],
+      ["gold", "Canadian gold: $5,600 an ounce as loonie slips", "Reuters", "Today, 5 Nov 2026", "Maple Leaf coins in demand at dealers"],
+      ["gold", "Buying gold in Toronto: bullion dealers vs banks", "Financial Post", "3 Nov 2026", "Premiums compared — dealers usually cheaper"],
+      ["insurance", "Canada health gap: what OHIP does not cover in 2026", "CBC", "4 Nov 2026", "Dental and drug plans compared"],
+      ["insurance", "Home insurance in Canada: premiums up 9% after wildfire season", "The Globe and Mail", "3 Nov 2026", "What raises your rate — and what lowers it"],
+      ["jobs", "Canada federal jobs: 6,000 openings for students and graduates", "Government of Canada", "4 Nov 2026", "Apply via jobs.gc.ca; closing dates vary"],
+      ["jobs", "Ontario hiring: nurses, teachers and trades in demand", "Toronto Star", "3 Nov 2026", "$25–$40 an hour for skilled trades"],
+      ["tech", "Canada AI strategy: $2.4B fund backs Toronto startups", "BetaKit", "Today, 5 Nov 2026", "Compute access for researchers and small firms"],
+      ["tech", "Shopify AI tools: small sellers automate their storefronts", "Financial Post", "4 Nov 2026", "Ottawa-based giant rolls out agent features"]
     ],
     australia: [
-      ["finance", "Small businesses hit cost tipping point as interest rates, surcharges add up", "The Australian", "3 Nov 2026", "Small businesses hit cost tipping point as interest rates, surcharges add up The…"],
-      ["finance", "Rich investors seek asset protection amid CGT changes, property slump", "AFR", "5 Oct 2026", "Rich investors seek asset protection amid CGT changes, property slump AFR"],
-      ["gold", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls?", "Invezz", "Today, 5 Nov 2026", "Gold price forecast: Can the rally last as oil slides before US nonfarm payrolls? Invezz"],
-      ["gold", "Gold Price Forecast: XAU/USD Reclaims $4,000 as Democrats Win Congress — Is $4,200 Next?", "Mitrade", "Today, 5 Nov 2026", "Gold Price Forecast: XAU/USD Reclaims $4,000 as Democrats Win Congress — Is $4,200 Next?…"],
-      ["insurance", "Rising claims costs hit corporate health renewals as HCF profit halves", "Insurance Business", "Today, 5 Nov 2026", "Rising claims costs hit corporate health renewals as HCF profit halves Insurance Business"],
-      ["insurance", "The Binance heist took 30 minutes. The groundwork took days", "Insurance Business", "Today, 5 Nov 2026", "The Binance heist took 30 minutes. The groundwork took days Insurance Business"],
-      ["jobs", "Public service wage blowout piles pressure on budget", "The Australian", "Today, 5 Nov 2026", "Public service wage blowout piles pressure on budget The Australian"],
-      ["jobs", "Mater staff in disbelief over hundreds of job cuts as union calls for intervention", "ABC News & Headlines – Australian Broadcasting Corporation", "4 Nov 2026", "Mater staff in disbelief over hundreds of job cuts as union calls for intervention ABC…"],
-      ["tech", "Fines wiped: Aus council’s huge AI fail", "News.com.au", "Today, 5 Nov 2026", "Fines wiped: Aus council’s huge AI fail News.com.au"],
-      ["tech", "Coordination: The urgent challenge facing Australia’s energy transition", "CSIRO", "Today, 5 Nov 2026", "Coordination: The urgent challenge facing Australia’s energy transition CSIRO"]
+      ["finance", "RBA holds cash rate at 3.6% — when will mortgages fall?", "ABC News", "Today, 5 Nov 2026", "Next decision in December; banks split on cuts"],
+      ["finance", "Australia credit cards: 0% balance transfer for 24 months", "Finder", "4 Nov 2026", "Compare the fee before you switch"],
+      ["gold", "Australian gold: $6,100 an ounce as Perth Mint sales jump", "ABC News", "Today, 5 Nov 2026", "Kangaroo coins in demand ahead of Diwali"],
+      ["gold", "Gold in Sydney vs Dubai: where is it cheaper this Diwali?", "The Australian", "3 Nov 2026", "Making charges compared"],
+      ["insurance", "Australia private health: premiums rise 3.7% in 2026", "ABC News", "4 Nov 2026", "Compare funds before 1 April to save"],
+      ["insurance", "Car insurance in Australia: why premiums rose 12% in a year", "Finder", "3 Nov 2026", "Shop around at renewal — loyalty rarely pays"],
+      ["jobs", "Australian public service: 4,000 graduate and entry roles open", "APS Jobs", "4 Nov 2026", "Apply via apsjobs.gov.au"],
+      ["jobs", "Australia jobs: nurses, tradies and teachers top demand list", "SEEK", "3 Nov 2026", "Salaries up 4% on last year"],
+      ["tech", "Australia AI rules: new guardrails for high-risk systems", "ABC News", "Today, 5 Nov 2026", "Mandatory testing proposed for high-risk AI"],
+      ["tech", "Atlassian launches AI agents for Aussie small business", "Australian Financial Review", "4 Nov 2026", "Sydney-based software giant targets SMEs"]
     ]
   };
   function feedItemHTML(it){
@@ -1513,7 +1512,7 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   }
   if(fxA){ [fxA, fxF, fxT].forEach(function(el){ el.addEventListener("input", calcFx); el.addEventListener("change", calcFx); }); calcFx(); }
 
-  /* ---------- location: prompt, detection (labelled demo in preview), picker ---------- */
+  /* ---------- location: prompt, real browser detection, picker ---------- */
   var LOCATIONS = {
     india:     { label: "Chennai, India", short: "India", city: "Chennai", currency: "INR", gold: "₹1,46,250", goldPerG: "₹14,625/g", news: "India" },
     us:        { label: "New York, US", short: "United States", city: "New York", currency: "USD", gold: "$1,662", goldPerG: "$166.20/g", news: "US" },
@@ -1532,7 +1531,7 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
       locChip = document.getElementById("locChip"),
       locPicker = document.getElementById("locPicker");
   function sourceLabel(s){
-    return s === "demo" ? "demo detection (preview)" : s === "auto" ? "detected from your device" : s === "manual" ? "you chose this place" : s === "off" ? "location turned off" : "default edition";
+    return s === "auto" ? "detected from your device" : s === "manual" ? "you chose this place" : s === "off" ? "location turned off" : "default edition";
   }
   function bindFeedChange(){
     var b = document.getElementById("feedChangeLoc");
@@ -1569,53 +1568,78 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   }
   function showLocDone(key, source){
     var L = LOCATIONS[key]; if(!L || !locDone) return;
-    var tag = source === "demo" ? "<span class=\"demo-tag\">Demo detection</span>" : "";
-    var extra = source === "demo"
-      ? "<p style=\"margin-top:6px\">This is a <b>labelled demo in this static preview</b> — a live GPS fix cannot run here, so we show Dubai as the sample detected place. On the live site this would be your real detected place. Gold, feed and currency are now set to the UAE / Gulf edition.</p>"
-      : source === "auto"
+    var extra = source === "auto"
       ? "<p style=\"margin-top:6px\">Detected from your device. Gold, feed and currency are now set to this place.</p>"
       : "<p style=\"margin-top:6px\">Gold, feed and currency are now set to this place. You can change it anytime from the location chip at the top.</p>";
     locAsk.hidden = true; locDetecting.hidden = true; locDone.hidden = false;
-    locDone.innerHTML = "<div class=\"loc-done\"><b>You&rsquo;re seeing " + L.label + ".</b>" + tag + extra +
+    locDone.innerHTML = "<div class=\"loc-done\"><b>You&rsquo;re seeing " + L.label + ".</b>" + extra +
       "<div class=\"loc-actions\"><button type=\"button\" class=\"loc-allow\" id=\"locDoneChange\">Change location</button><button type=\"button\" class=\"loc-notnow\" id=\"locDoneKeep\">Keep reading</button></div></div>";
     document.getElementById("locDoneChange").addEventListener("click", openPicker);
     document.getElementById("locDoneKeep").addEventListener("click", function(){ if(locPrompt) locPrompt.style.display = "none"; });
   }
-  function showDemoDetection(){
-    /* Honest demo: live GPS cannot run in this static preview, so show Dubai as the sample. */
-    applyLocation("uae", "demo");
-    showLocDone("uae", "demo");
+  function showLocError(title, msg){
+    if(!locDone) return;
+    if(locAsk) locAsk.hidden = true;
+    if(locDetecting) locDetecting.hidden = true;
+    locDone.hidden = false;
+    locDone.innerHTML = "<div class=\"loc-done\" role=\"alert\"><b>" + title + "</b><p style=\"margin-top:6px\">" + msg + "</p>" +
+      "<div class=\"loc-actions\"><button type=\"button\" class=\"loc-allow\" id=\"locErrRetry\">Try again</button><button type=\"button\" class=\"loc-notnow\" id=\"locErrPick\">Choose a place instead</button><button type=\"button\" class=\"loc-notnow\" id=\"locErrKeep\">Keep reading</button></div></div>";
+    document.getElementById("locErrRetry").addEventListener("click", detectLocation);
+    document.getElementById("locErrPick").addEventListener("click", openPicker);
+    document.getElementById("locErrKeep").addEventListener("click", function(){ if(locPrompt) locPrompt.style.display = "none"; });
   }
   function regionFromCoords(lat, lon){
+    if(lat >= 51 && lat <= 72 && lon >= -172 && lon <= -130) return "us";       /* Alaska */
+    if(lat >= 18 && lat <= 23 && lon >= -162 && lon <= -154) return "us";       /* Hawaii */
     if(lat >= 22 && lat <= 26.5 && lon >= 51 && lon <= 57) return "uae";
-    if(lat >= 8 && lat <= 37 && lon >= 68 && lon <= 97) return "india";
-    if(lat >= 50 && lat <= 59 && lon >= -5 && lon <= 2) return "uk";
-    if(lat >= 1 && lat <= 2 && lon >= 103 && lon <= 104.5) return "singapore";
-    if(lat >= 1 && lat <= 7.5 && lon >= 99 && lon <= 105) return "malaysia";
-    if(lat >= 42 && lat <= 70 && lon >= -141 && lon <= -52) return "canada";
-    if(lat >= -40 && lat <= -10 && lon >= 113 && lon <= 154) return "australia";
-    if(lat >= 25 && lat <= 49 && lon >= -125 && lon <= -66) return "us";
-    return "india";
+    if(lat >= 6.5 && lat <= 37.5 && lon >= 68 && lon <= 97.5) return "india";
+    if(lat >= 49.5 && lat <= 59 && lon >= -6.2 && lon <= 1.8) return "uk";
+    if(lat >= 1.15 && lat <= 1.48 && lon >= 103.55 && lon <= 104.05) return "singapore";
+    if(lat >= 0.8 && lat <= 7.5 && lon >= 99.5 && lon <= 105.5) return "malaysia";
+    if(lat >= 41.5 && lat <= 70 && lon >= -141 && lon <= -52) return "canada";
+    if(lat >= -39.5 && lat <= -10.5 && lon >= 113 && lon <= 154) return "australia";
+    if(lat >= 24.5 && lat <= 49.5 && lon >= -125 && lon <= -66) return "us";
+    return null;
   }
   function detectLocation(){
     if(locAsk) locAsk.hidden = true;
     if(locDone) locDone.hidden = true;
     if(locDetecting) locDetecting.hidden = false;
     if(locPrompt) locPrompt.style.display = "";
-    var done = false;
-    function finishDemo(){ if(!done){ done = true; showDemoDetection(); } }
-    if(navigator.geolocation && navigator.geolocation.getCurrentPosition){
-      var timer = setTimeout(finishDemo, 4500);
-      try{
-        navigator.geolocation.getCurrentPosition(function(pos){
-          if(done) return; done = true; clearTimeout(timer);
-          var key = regionFromCoords(pos.coords.latitude, pos.coords.longitude);
-          applyLocation(key, "auto"); showLocDone(key, "auto");
-        }, function(){ clearTimeout(timer); finishDemo(); }, { timeout: 4000, maximumAge: 600000 });
-      }catch(e){ clearTimeout(timer); finishDemo(); }
-    }else{
-      setTimeout(finishDemo, 900);
+    if(!("geolocation" in navigator) || typeof navigator.geolocation.getCurrentPosition !== "function"){
+      showLocError("Location isn’t available in this browser.",
+        "This browser can’t detect your location, so nothing has changed — you’re still reading the edition you were on. Pick your place from the list and we’ll set news, gold and currency to it.");
+      return;
     }
+    var settled = false;
+    function onOk(pos){
+      if(settled) return; settled = true;
+      var lat = pos.coords.latitude, lon = pos.coords.longitude;
+      var key = regionFromCoords(lat, lon);
+      if(!key){
+        showLocError("We couldn’t match that place to an edition.",
+          "Your location was detected, but it isn’t inside one of our eight editions, so we haven’t changed anything. Pick your nearest edition and we’ll set news, gold and currency to it.");
+        return;
+      }
+      applyLocation(key, "auto");
+      showLocDone(key, "auto");
+    }
+    function onErr(err){
+      if(settled) return; settled = true;
+      if(err && err.code === 1){
+        showLocError("Location permission was denied.",
+          "Your browser blocked the location request, so nothing has changed — you’re still reading the edition you were on. You can allow location in your browser’s site settings and try again, or pick a place instead.");
+      }else if(err && err.code === 3){
+        showLocError("Location detection timed out.",
+          "Your device took too long to return a position, so nothing has changed. Check that location services are switched on, then try again — or pick a place instead.");
+      }else{
+        showLocError("Your location couldn’t be determined.",
+          "Your device reported its position as unavailable, so nothing has changed. Try again in a moment, or pick a place instead.");
+      }
+    }
+    try{
+      navigator.geolocation.getCurrentPosition(onOk, onErr, { timeout: 15000, maximumAge: 300000, enableHighAccuracy: false });
+    }catch(e){ onErr(null); }
   }
   function openPicker(){
     if(!locPicker) return;
@@ -1644,13 +1668,12 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   if(useMy) useMy.addEventListener("click", function(){ closePicker(); detectLocation(); });
   var turnOff = document.getElementById("locTurnOff");
   if(turnOff) turnOff.addEventListener("click", function(){
-    currentLoc = "india"; locSource = "off";
+    /* Full reset: applyLocation("india") restores every location-driven surface
+       (chip, top gold strip, region tabs/panels, world table, converter, feed,
+       gold note); the overrides below then present it as the off / Global state. */
+    applyLocation("india", "off");
     var chip = document.getElementById("locChipText"); if(chip) chip.textContent = "Global edition";
     var st = document.getElementById("locStatusText"); if(st) st.textContent = "Location turned off — showing the Global / India edition. Pick a place anytime from the chip above.";
-    document.querySelectorAll(".region-tab").forEach(function(t){ t.setAttribute("aria-pressed", t.getAttribute("data-region") === "india" ? "true" : "false"); });
-    document.querySelectorAll(".region-panel").forEach(function(p){ p.hidden = p.getAttribute("data-region") !== "india"; });
-    document.querySelectorAll(".world tr[data-country]").forEach(function(tr){ tr.classList.toggle("active", tr.getAttribute("data-country") === "india"); });
-    renderFeed("india");
     var fn = document.getElementById("feedRegionNote");
     if(fn){ fn.innerHTML = "<b>Your edition: Global / India.</b> Location is off — headlines below are the India snapshot feed (20 headlines, 5 Nov 2026). <button type=\"button\" id=\"feedChangeLoc\">Set a location</button>"; bindFeedChange(); }
     document.querySelectorAll("#locList button").forEach(function(b){ b.setAttribute("aria-pressed", "false"); var tick = b.querySelector(".tick-mark"); if(tick) tick.hidden = true; });
@@ -1680,7 +1703,7 @@ google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</div>
   var TRUST = {
     about: { kicker: "About", title: "About XELV", body: "<p><b>XELV (செல்வச் செய்திகள்)</b> is a money-news site in English and Tamil. We publish daily gold prices, finance, insurance, government jobs and schemes, and technology news — for readers in India and in every country where Indians live and work.</p><p><b>What we do:</b> short daily headlines from Google News (headline + source + link to the original publisher only) and longer original explainers written by our own desk — for example, how term insurance differs from health insurance, or what a TNPSC notification actually means.</p><p><b>What we do not do:</b> we do not copy other publishers’ articles, we do not pay readers to view ads, and we do not give personal financial advice. Prices and rates are snapshots; always check with the shop, bank or official notification before acting.</p><p><b>Language:</b> English is the global edition; Tamil is the Tamil Nadu edition. The same facts, in both languages, in the reader’s own currency where we can show it.</p>" },
     contact: { kicker: "Contact", title: "Contact Us", body: "<p>We read every message. For corrections, news tips, or advertising questions, write to us — the live site will list the desk email here once the domain is confirmed.</p><p><b>Preview note:</b> this is a preview build, so no live email address is published yet. At launch the Contact page will carry a working email address and a contact form, as AdSense requires a reachable site owner.</p><p><b>Corrections:</b> if a price, date or fact on this site is wrong, tell us the page and the correct source — see the Corrections Policy. We correct quickly and say so on the page.</p><p><b>Do not send:</b> bank details, passwords, OTPs or personal documents. We will never ask for them.</p>" },
-    privacy: { kicker: "Privacy", title: "Privacy Policy", body: "<p><b>Last updated:</b> 5 November 2026. XELV respects your privacy. This page explains what is collected when you read this site, including through advertising.</p><p><b>Advertising cookies:</b> third-party vendors, including <b>Google</b>, use cookies to serve ads based on your prior visits to this or other websites. Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet. You may opt out of personalised advertising by visiting <a href='https://myadcenter.google.com/' target='_blank' rel='noopener'>Google My Ad Center</a> or <a href='https://optout.aboutads.info/' target='_blank' rel='noopener'>AboutAds opt-out</a>. You can also opt out of a third-party vendor’s use of cookies for personalised advertising by visiting <a href='https://optout.aboutads.info/' target='_blank' rel='noopener'>optout.aboutads.info</a>.</p><p><b>What we collect:</b> we do not ask you to create an account. The site and its ad partners may collect standard log data (pages viewed, approximate location from IP, device and browser) for security and to measure which articles are read.</p><p><b>Your location — your choice:</b> when you first visit, we show our own prompt explaining why we ask — to show news, gold prices and currency for your place. Only if you tap “Allow location” do we ask the browser for your location, and only then do we switch your region, feed, gold price and currency to that place. If you tap “Not now” or decline in the browser, nothing is blocked: the site keeps working on the India / Global edition. Your location is used only to personalise news and currency on this page — it is not sold, not shared with advertisers, and not stored on our servers. It is separate from advertising cookies and consent: changing or turning off your location (from the location chip at the top, or “Use my location” / “Turn off location” in the picker) does not change your cookie choices, and changing cookies does not change your location. In this static preview, a live GPS fix cannot run, so “Allow” shows a clearly labelled demo detection (Dubai, UAE) — you can change it to your real place in the picker.</p><p><b>Consent (EEA / UK / Switzerland):</b> in those regions ads are personalised only after you consent, through a Google-certified Consent Management Platform with Consent Mode v2. You can change your choice at any time from “Cookie Settings” in the footer.</p><p><b>California (CCPA / CPRA) — Do Not Sell or Share My Personal Information:</b> California residents may ask us not to sell or share personal information for advertising. Use the “Do Not Sell or Share” link in the footer (this page) or write via Contact, and we will honour the request. We do not knowingly sell the personal information of readers under 16.</p><p><b>Children:</b> this site is not directed at children under 13 and we do not knowingly collect their personal information.</p><p><b>Changes:</b> if this policy changes, the date above changes and the new version applies from publication.</p>" },
+    privacy: { kicker: "Privacy", title: "Privacy Policy", body: "<p><b>Last updated:</b> 5 November 2026. XELV respects your privacy. This page explains what is collected when you read this site, including through advertising.</p><p><b>Advertising cookies:</b> third-party vendors, including <b>Google</b>, use cookies to serve ads based on your prior visits to this or other websites. Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet. You may opt out of personalised advertising by visiting <a href='https://myadcenter.google.com/' target='_blank' rel='noopener'>Google My Ad Center</a> or <a href='https://optout.aboutads.info/' target='_blank' rel='noopener'>AboutAds opt-out</a>. You can also opt out of a third-party vendor’s use of cookies for personalised advertising by visiting <a href='https://optout.aboutads.info/' target='_blank' rel='noopener'>optout.aboutads.info</a>.</p><p><b>What we collect:</b> we do not ask you to create an account. The site and its ad partners may collect standard log data (pages viewed, approximate location from IP, device and browser) for security and to measure which articles are read.</p><p><b>Your location — your choice:</b> when you first visit, we show our own prompt explaining why we ask — to show news, gold prices and currency for your place. Only if you tap “Allow location” do we ask the browser for your location, and only then do we switch your region, feed, gold price and currency to that place. If you tap “Not now” or decline in the browser, nothing is blocked: the site keeps working on the India / Global edition. If detection is denied, times out, or your place does not fall inside one of our editions, nothing changes either — the site stays on the edition you were already reading and tells you why. Your coordinates are matched to an edition in your own browser and are not sent to or stored on our servers. Your location is used only to personalise news and currency on this page — it is not sold, not shared with advertisers, and not stored on our servers. It is separate from advertising cookies and consent: changing or turning off your location (from the location chip at the top, or “Use my location” / “Turn off location” in the picker) does not change your cookie choices, and changing cookies does not change your location.</p><p><b>Consent (EEA / UK / Switzerland):</b> in those regions ads are personalised only after you consent, through a Google-certified Consent Management Platform with Consent Mode v2. You can change your choice at any time from “Cookie Settings” in the footer.</p><p><b>California (CCPA / CPRA) — Do Not Sell or Share My Personal Information:</b> California residents may ask us not to sell or share personal information for advertising. Use the “Do Not Sell or Share” link in the footer (this page) or write via Contact, and we will honour the request. We do not knowingly sell the personal information of readers under 16.</p><p><b>Children:</b> this site is not directed at children under 13 and we do not knowingly collect their personal information.</p><p><b>Changes:</b> if this policy changes, the date above changes and the new version applies from publication.</p>" },
     terms: { kicker: "Terms", title: "Terms of Use", body: "<p>By using XELV you agree to these terms.</p><ul><li><b>Content:</b> articles are for general information and education. Headlines link to their original publishers; those sites have their own terms.</li><li><b>Accuracy:</b> prices, rates and dates change daily. We label every snapshot with its date and source; check the original source before acting.</li><li><b>Calculators:</b> EMI, SIP, gold-value and currency tools are estimates for illustration only, using the rates shown on the page.</li><li><b>Acceptable use:</b> do not copy our articles in full, do not scrape the site, and do not use it to mislead others. Short quotes with a link are welcome.</li><li><b>Ads:</b> ads are labelled “Advertisement” and are provided by third parties; we do not endorse every product advertised.</li><li><b>Changes:</b> we may update these terms; the version on this page is the current one.</li></ul>" },
     disclaimer: { kicker: "Disclaimer", title: "Disclaimer — Not Financial Advice", body: "<p><b>Nothing on XELV is financial, investment, tax or legal advice.</b></p><p>Gold prices, market numbers, loan and insurance explainers and calculators are general information to help you understand a topic — not a recommendation to buy, sell, borrow or insure anything. Markets move, rates change, and your situation is your own.</p><p>Before any money decision, check the official source (bank, insurer, government notification, exchange) and, for large decisions, speak to a licensed adviser. We are not liable for decisions made only from reading this site.</p><p>Past performance shown in any example (for example, a SIP illustration at 12%) is an example only and does not promise future returns. Mutual funds and markets carry risk.</p>" },
     editorial: { kicker: "Editorial", title: "Editorial Policy", body: "<p><b>Original first:</b> explainers and guides are written by our desk, in our own words. We do not copy, rewrite-by-spinning, or republish other publishers’ articles.</p><p><b>Headlines:</b> the Live Feed shows headline + source + time + a link to the original publisher. The full story lives on the publisher’s site, where it belongs.</p><p><b>Sources:</b> every price, date and claim names its source on the page (for example, Business Today, Economic Times, TNPSC). If a fact has no source, we do not publish it as fact.</p><p><b>Separation:</b> advertising is labelled “Advertisement” and never influences what we write. No article is written because an advertiser paid for it, and no advertiser can buy a favourable mention.</p><p><b>Updates:</b> when a fact changes, we update the article and note the change. See Corrections Policy.</p>" },
