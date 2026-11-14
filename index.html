@@ -2091,6 +2091,33 @@ footer.site button:hover{color:#fff}
     for(var j = 0; j < text.length; j++) h = (h * 31 + text.charCodeAt(j)) >>> 0;
     return resolveImg(pool[h % pool.length], w);
   }
+  /* Per-page image variety (14 Nov 2026): pickImage's hash is (h*31+c), and
+     31 == 1 (mod 6), so pool[h % 6] is just the sum of char codes mod 6 —
+     three gold headlines in a row picked the same picture. pickUniqueId
+     advances within the same pool until it finds a photo not used yet on
+     this page; imgIdFor remembers the choice per headline, so a story's
+     card, feed thumbnail and reader all show the same picture. */
+  var USED_IMG_IDS = {};
+  var IMG_ID_BY_TITLE = {};
+  function pickUniqueId(cat, text){
+    text = text || "";
+    var pool = null;
+    for(var i = 0; i < IMG_KEYWORDS.length; i++){ if(IMG_KEYWORDS[i].re.test(text)){ pool = IMG_KEYWORDS[i].pool; break; } }
+    if(!pool) pool = IMG_BY_CAT[cat] || IMG_BY_CAT.finance;
+    var h = 0;
+    for(var j = 0; j < text.length; j++) h = (h * 31 + text.charCodeAt(j)) >>> 0;
+    var start = h % pool.length;
+    for(var k = 0; k < pool.length; k++){
+      var id = pool[(start + k) % pool.length];
+      if(!USED_IMG_IDS[id]){ USED_IMG_IDS[id] = 1; return id; }
+    }
+    return pool[start];
+  }
+  function imgIdFor(it){
+    var key = it.title || "";
+    if(!IMG_ID_BY_TITLE[key]) IMG_ID_BY_TITLE[key] = pickUniqueId(it.cat, it.title + " " + it.summary);
+    return IMG_ID_BY_TITLE[key];
+  }
   /* related stock footage per category (Pexels, hotlinkable file URLs, verified) */
   var VIDEO_BY_CAT = {
     finance: "https://videos.pexels.com/video-files/38168755/16204627_960_540_25fps.mp4",
@@ -2105,8 +2132,8 @@ footer.site button:hover{color:#fff}
     if(/hospital|doctor|medical|health|patient/i.test(text)) return VIDEO_BY_CAT.insurance;
     return VIDEO_BY_CAT[cat] || null;
   }
-  function wireMediaHTML(cat, text, imgW){
-    var img = pickImage(cat, text, imgW || 1200);
+  function wireMediaHTML(cat, text, imgW, imgId){
+    var img = imgId ? resolveImg(imgId, imgW || 1200) : pickImage(cat, text, imgW || 1200);
     var vid = pickVideo(cat, text);
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var html = "<figure class=\"wire-hero\"><img src=\"" + img + "\" alt=\"Illustrative image related to this story\" loading=\"lazy\" onerror=\"if(this.dataset.fb){this.onerror=null;var fg=this.parentNode;if(fg)fg.style.display='none';}else{this.dataset.fb='1';this.src='" + (CAT_FALLBACK_IMG[cat] || CAT_FALLBACK_IMG.finance) + "';}\">" +
@@ -2168,19 +2195,20 @@ footer.site button:hover{color:#fff}
     if(!list) return;
     if(feedObserver) feedObserver.disconnect();
     cleanFeedMetas();
-    Array.prototype.forEach.call(list.querySelectorAll("li"), function(li){
+    var domItems = wireItemsFromDOM();
+    Array.prototype.forEach.call(list.querySelectorAll("li"), function(li, liIdx){
       if(li.querySelector(".wire-media")) return;
       var cat = li.getAttribute("data-cat") || "finance";
       var chip = li.querySelector(".feed-cat");
       var content = null;
       Array.prototype.forEach.call(li.children, function(ch){ if(ch.tagName === "DIV" && !content) content = ch; });
       if(!content) return;
-      var text = (content.textContent || "") + " " + cat;
       var fig = document.createElement("div");
       fig.className = "wire-media";
       fig.setAttribute("aria-hidden", "true");
       var img = document.createElement("img");
-      img.src = pickImage(cat, text, 480);
+      var dit = domItems[liIdx] || { cat: cat, title: "", summary: "" };
+      img.src = resolveImg(imgIdFor(dit), 480);
       img.alt = "";
       img.loading = "lazy";
       img.decoding = "async";
@@ -2219,7 +2247,7 @@ footer.site button:hover{color:#fff}
       "<p>This story sits in XELV&rsquo;s " + escHtml(it.catLabel) + " coverage for " + escHtml(regionName) + ", collected via Google News. XELV&rsquo;s brief above is our own short summary of the report, written from the headline and the feed summary — the figures and facts are exactly those carried in the report itself.</p>";
     rBody.innerHTML = "<h2>" + escHtml(it.title) + "</h2>" +
       "<div class=\"article-byline\"><b>Wire Desk</b> · XELV<br>Source: <b>" + escHtml(it.source) + "</b> — credited by name · Published: " + escHtml(it.time) + "<br>Region: " + escHtml(regionName) + " · Section: " + escHtml(it.catLabel) + "</div>" +
-      wireMediaHTML(it.cat, it.title + " " + it.summary, 1200) +
+      wireMediaHTML(it.cat, it.title + " " + it.summary, 1200, imgIdFor(it)) +
       "<div class=\"wire-brief\"><h4>XELV brief · XELV சுருக்கம்</h4>" + brief + "</div>" +
       "<p class=\"src\">XELV brief — our own summary of this report. The original report is by " + escHtml(it.source) + ", credited by name above; XELV keeps the reading on this site and does not republish the publisher&rsquo;s article.</p>" +
       (moreHTML || "");
@@ -2267,13 +2295,26 @@ footer.site button:hover{color:#fff}
      (#feedList, 20 static items) and the FEEDS object (7 regions x 10).
      Every card opens the same on-site reader via openWireItem — never a link out. */
   var SECTION_ITEMS = [];
+  /* FEEDS entries are [title, source, time, summary] with no category field
+     (the old code read a[0] as the category, so every category section came
+     out empty and World cards showed the publisher as the headline). Derive
+     the section from the headline text instead. */
+  function deriveCat(title, summary){
+    var t = (title || "") + " " + (summary || "");
+    if(/gold|silver|bullion|jewellery|jewelry/i.test(t)) return "gold";
+    if(/health insurance|insurance|insurer|hospital|doctor|medical|patient|surgery|cancer/i.test(t)) return "insurance";
+    if(/tnpsc|ssc|upsc|recruitment|vacanc|exam|apprentice|government job|govt job/i.test(t)) return "jobs";
+    if(/robot|artificial intelligence|\bai\b|chip|smartphone|gadget|software|technology|fintech/i.test(t)) return "tech";
+    return "finance";
+  }
   function feedItemObj(a){
-    return { cat: a[0], catLabel: CATLABEL[a[0]] || a[0], title: a[1], source: a[2], time: a[3], summary: a[4] || "" };
+    var cat = deriveCat(a[0], a[3]);
+    return { cat: cat, catLabel: CATLABEL[cat] || cat, title: a[0], source: a[1], time: a[2], summary: a[3] || "" };
   }
   function feedsByCat(cat){
     var out = [];
     Object.keys(FEEDS).forEach(function(r){
-      FEEDS[r].forEach(function(a){ if(a[0] === cat) out.push(feedItemObj(a)); });
+      FEEDS[r].forEach(function(a){ var it = feedItemObj(a); if(it.cat === cat) out.push(it); });
     });
     return out;
   }
@@ -2286,7 +2327,7 @@ footer.site button:hover{color:#fff}
   function scardHTML(it, size){
     var n = SECTION_ITEMS.length; SECTION_ITEMS.push(it);
     return '<button type="button" class="scard scard-' + size + '" data-sec="' + n + '">' +
-      '<span class="scard-img"><img src="' + pickImage(it.cat, it.title + " " + it.summary, size === "lg" ? 640 : 480) + '" alt="" loading="lazy"></span>' +
+      '<span class="scard-img"><img src="' + resolveImg(imgIdFor(it), size === "lg" ? 640 : 480) + '" alt="" loading="lazy"></span>' +
       '<span class="scard-cat">' + escHtml(catLine(it.cat)) + '</span>' +
       '<span class="scard-title">' + escHtml(it.title) + '</span>' +
       '<span class="scard-meta">' + metaHTML(it) + '</span></button>';
@@ -2294,7 +2335,7 @@ footer.site button:hover{color:#fff}
   function hcardHTML(it){
     var n = SECTION_ITEMS.length; SECTION_ITEMS.push(it);
     return '<button type="button" class="hcard" data-sec="' + n + '">' +
-      '<span class="hcard-img"><img src="' + pickImage(it.cat, it.title + " " + it.summary, 240) + '" alt="" loading="lazy"></span>' +
+      '<span class="hcard-img"><img src="' + resolveImg(imgIdFor(it), 240) + '" alt="" loading="lazy"></span>' +
       '<span class="hcard-body"><span class="hcard-title">' + escHtml(it.title) + '</span>' +
       '<span class="scard-meta">' + metaHTML(it) + '</span></span></button>';
   }
@@ -2323,7 +2364,7 @@ footer.site button:hover{color:#fff}
     if(lead && items[0]){
       var it = items[0], n = SECTION_ITEMS.length; SECTION_ITEMS.push(it);
       lead.innerHTML = '<button type="button" class="hero-lead-btn" data-sec="' + n + '">' +
-        '<span class="scard-img"><img src="' + pickImage(it.cat, it.title + " " + it.summary, 1200) + '" alt="" loading="lazy"></span>' +
+        '<span class="scard-img"><img src="' + resolveImg(imgIdFor(it), 1200) + '" alt="" loading="lazy"></span>' +
         '<span class="scard-cat">' + escHtml(catLine(it.cat)) + '</span>' +
         '<span class="hero-lead-title">' + escHtml(it.title) + '</span>' +
         (it.summary ? '<span class="hero-lead-dek">' + escHtml(it.summary) + '</span>' : '') +
@@ -2343,7 +2384,7 @@ footer.site button:hover{color:#fff}
         '<span class="jn-body"><span class="scard-cat">' + escHtml(catLine(it.cat)) + '</span>' +
         '<span class="jn-title">' + escHtml(it.title) + '</span>' +
         '<span class="scard-meta">' + metaHTML(it) + '</span></span>' +
-        '<span class="jn-img"><img src="' + pickImage(it.cat, it.title + " " + it.summary, 480) + '" alt="" loading="lazy"></span></button>';
+        '<span class="jn-img"><img src="' + resolveImg(imgIdFor(it), 480) + '" alt="" loading="lazy"></span></button>';
     }).join("");
   }
   function buildGoldPanel(){
@@ -2359,7 +2400,7 @@ footer.site button:hover{color:#fff}
       { label: "Gold 24K · Mumbai", value: "₹1,45,830", sub: "per 10g", seed: "gold price Mumbai" }
     ];
     el.innerHTML = cards.map(function(c){
-      return '<div class="gp-card"><span class="gp-img"><img src="' + pickImage("gold", c.seed, 480) + '" alt="" loading="lazy"></span>' +
+      return '<div class="gp-card"><span class="gp-img"><img src="' + resolveImg(pickUniqueId("gold", c.seed), 480) + '" alt="" loading="lazy"></span>' +
         '<span class="gp-body"><span class="gp-label">' + c.label + '</span>' +
         '<span class="gp-value">' + c.value + '</span>' +
         '<span class="gp-sub">' + c.sub + '</span></span></div>';
@@ -2416,7 +2457,7 @@ footer.site button:hover{color:#fff}
   buildSection("secFinanceCards", feedsByCat("finance"), "3+3");
   buildSection("secGoldCards", feedsByCat("gold"), "6");
   buildSection("secInsuranceCards", feedsByCat("insurance"), "3+3");
-  buildSection("secJobsCards", feedsByCat("jobs"), "3+3");
+  buildSection("secJobsCards", feedsByCat("jobs").concat(wireItemsFromDOM().filter(function(x){ return x.cat === "jobs"; })), "3+3");
   buildSection("secTechCards", feedsByCat("tech"), "6");
   buildJustNow();
   buildSection("secWorldCards", [["us", 0], ["uk", 2], ["uae", 4], ["singapore", 6], ["malaysia", 8], ["canada", 1]].map(function(p){ return feedItemObj(FEEDS[p[0]][p[1]]); }), "6");
