@@ -1865,21 +1865,21 @@ nav.mainnav a.hot{color:var(--red)}
   var CAT_FALLBACK_IMG = { finance: ux("1554224155-6726b3ff858f", 1200), gold: ux("1611591437281-460bfbe1220a", 1200), insurance: ux("1519494026892-80bbd2d6fd0d", 1200), jobs: ux("1497366216548-37526070297c", 1200), tech: ux("1518770660439-4636190af475", 1200) };
   /* keyword pools — first match wins; entries are Unsplash photo ids only */
   var IMG_KEYWORDS = [
-    { re: /gold|silver|jewellery|jewelry|bullion|dhanteras|precious metal/i, pool: ["U:1610375461246-83df859d849d", "U:1611591437281-460bfbe1220a"] },
-    { re: /home loan|mortgage|housing|property|real estate|\bemi\b/i, pool: ["U:1560518883-ce09059eeffa", "U:1600585154340-be6161a56a0c"] },
-    { re: /exam|tnpsc|ssc|upsc|recruitment|vacanc|notification|apply|student|civil service|apprentice/i, pool: ["U:1434030216411-0b793f4b4173", "U:1541339907198-e08756dedf3f"] },
-    { re: /hospital|doctor|medical|health|nhs|patient|surgery|cancer/i, pool: ["U:1576091160399-112ba8d25d1d", "U:1519494026892-80bbd2d6fd0d"] },
-    { re: /sensex|nifty|stock|share market|trading|forex|\bfed\b|central bank|bank of england|\brbi\b|inflation|market/i, pool: ["U:1611974789855-9c2a0a7236a3", "U:1590283603385-17ffb3a7f29f"] },
-    { re: /credit[-\s]?card|balance transfer|\bapr\b|debt/i, pool: ["U:1553729459-efe14ef6055d", "U:1511707171634-5f897ff02aa9"] },
-    { re: /mutual fund|invest|saving|bonus|\btax\b|retire|pension|annuity/i, pool: ["U:1554224155-6726b3ff858f", "U:1526304640581-d334cdbbf45e"] },
-    { re: /robot|artificial intelligence|\bai\b|chip|smartphone|gadget|data cent|software|app\b/i, pool: ["U:1620712943543-bcc4688e7485", "U:1518770660439-4636190af475", "U:1511707171634-5f897ff02aa9"] }
+    { re: /gold|silver|jewellery|jewelry|bullion|dhanteras|precious metal/i, pool: ["U:1610375461246-83df859d849d", "U:1611591437281-460bfbe1220a", "U:1624365169364-0640dd10e180", "U:1762463176312-1757d5125c85", "U:1787549232666-06b2b95a494d", "U:1624365168898-1f7189831f41"] },
+    { re: /home loan|mortgage|housing|property|real estate|\bemi\b/i, pool: ["U:1560518883-ce09059eeffa", "U:1600585154340-be6161a56a0c", "U:1776186243408-3c0489503faa", "U:1783125127199-860da9744dcc", "U:1757524492552-d47a66a2b63e", "U:1613977257363-707ba9348227"] },
+    { re: /exam|tnpsc|ssc|upsc|recruitment|vacanc|notification|apply|student|civil service|apprentice/i, pool: ["U:1434030216411-0b793f4b4173", "U:1541339907198-e08756dedf3f", "U:1514369118554-e20d93546b30", "U:1665979738279-bd2441290e02", "U:1649252504109-686f70fa38af", "U:1596495868845-63031cb496da"] },
+    { re: /hospital|doctor|medical|health|nhs|patient|surgery|cancer/i, pool: ["U:1576091160399-112ba8d25d1d", "U:1519494026892-80bbd2d6fd0d", "U:1781989302296-805b5a8a2f2e", "U:1576091160550-2173dba999ef", "U:1532938911079-1b06ac7ceec7", "U:1505751172876-fa1923c5c528"] },
+    { re: /sensex|nifty|stock|share market|trading|forex|\bfed\b|central bank|bank of england|\brbi\b|inflation|market/i, pool: ["U:1611974789855-9c2a0a7236a3", "U:1590283603385-17ffb3a7f29f", "U:1651341050677-24dba59ce0fd", "U:1707761918029-1295034aa31e", "U:1768242079046-c9c633187db1", "U:1642543348745-03b1219733d9"] },
+    { re: /credit[-\s]?card|balance transfer|\bapr\b|debt/i, pool: ["U:1553729459-efe14ef6055d", "U:1511707171634-5f897ff02aa9", "U:1613243555988-441166d4d6fd", "U:1758876201966-a680772a41ef", "U:1556742031-c6961e8560b0", "U:1556742502-ec7c0e9f34b1"] },
+    { re: /mutual fund|invest|saving|bonus|\btax\b|retire|pension|annuity/i, pool: ["U:1554224155-6726b3ff858f", "U:1526304640581-d334cdbbf45e", "U:1768055105681-7d2096c5165f", "U:1767424196045-030bbde122a4", "U:1633158829875-e5316a358c6f", "U:1579621970563-ebec7560ff3e"] },
+    { re: /robot|artificial intelligence|\bai\b|chip|smartphone|gadget|data cent|software|app\b/i, pool: ["U:1620712943543-bcc4688e7485", "U:1518770660439-4636190af475", "U:1511707171634-5f897ff02aa9", "U:1485827404703-89b55fcc595e", "U:1589254065909-b7086229d08c", "U:1546776310-eef45dd6d63c"] }
   ];
   var IMG_BY_CAT = {
-    finance: ["U:1611974789855-9c2a0a7236a3", "U:1554224155-6726b3ff858f", "U:1526304640581-d334cdbbf45e", "U:1579532537598-459ecdaf39cc"],
-    gold: ["U:1610375461246-83df859d849d", "U:1611591437281-460bfbe1220a"],
-    insurance: ["U:1576091160399-112ba8d25d1d", "U:1519494026892-80bbd2d6fd0d"],
-    jobs: ["U:1434030216411-0b793f4b4173", "U:1497366216548-37526070297c", "U:1541339907198-e08756dedf3f"],
-    tech: ["U:1620712943543-bcc4688e7485", "U:1518770660439-4636190af475"]
+    finance: ["U:1611974789855-9c2a0a7236a3", "U:1554224155-6726b3ff858f", "U:1526304640581-d334cdbbf45e", "U:1579532537598-459ecdaf39cc", "U:1651341050677-24dba59ce0fd", "U:1768055105681-7d2096c5165f"],
+    gold: ["U:1610375461246-83df859d849d", "U:1611591437281-460bfbe1220a", "U:1624365169364-0640dd10e180", "U:1762463176312-1757d5125c85", "U:1787549232666-06b2b95a494d", "U:1624365168898-1f7189831f41"],
+    insurance: ["U:1576091160399-112ba8d25d1d", "U:1519494026892-80bbd2d6fd0d", "U:1781989302296-805b5a8a2f2e", "U:1576091160550-2173dba999ef", "U:1532938911079-1b06ac7ceec7", "U:1505751172876-fa1923c5c528"],
+    jobs: ["U:1434030216411-0b793f4b4173", "U:1497366216548-37526070297c", "U:1541339907198-e08756dedf3f", "U:1514369118554-e20d93546b30", "U:1665979738279-bd2441290e02", "U:1649252504109-686f70fa38af"],
+    tech: ["U:1620712943543-bcc4688e7485", "U:1518770660439-4636190af475", "U:1485827404703-89b55fcc595e", "U:1589254065909-b7086229d08c", "U:1644088379091-d574269d422f", "U:1531297484001-80022131f5a1"]
   };
   function resolveImg(entry, w){
     if(entry.indexOf("U:") === 0) return ux(entry.slice(2), w);
